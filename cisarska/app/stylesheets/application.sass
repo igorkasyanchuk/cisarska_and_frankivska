@@ -1,0 +1,115 @@
+@import base.sass
+
+!border_for_notice= 1px solid #ccc
+
+=bordered( !color = red )
+  :border= 1px solid !color
+=alpha-omega
+  +alpha
+  +omega
+  
+#root
+  +grid-container
+  #header
+    +grid-container
+    :height 80px
+    :position relative
+    #flags_container
+      +grid(16)
+      +omega
+      #flags_box
+        +float-right
+        +text-right
+        :padding-right 10px
+        :margin-top 1em
+        a
+          :display inline-block
+          :text-indent -8888
+    #logo
+      +grid(3)
+      +alpha
+      h1  
+        +grid-prefix(4)
+        :float left
+        :font-size 2.3em
+    #nav_container
+      +grid(12)
+      +omega
+      ul#nav
+        +float-right
+        +horizontal-list
+        :height 2em
+        :padding-top 1em
+        li
+          +text-right
+          a
+            :font-size 0.9em
+            :padding 2px 2px
+  #content
+    +grid-container
+    .container
+      +grid(16)
+    div.flash
+      +grid(16)
+      :margin-top 0.6em
+      :margin-bottom 0.6em
+      +alpha
+      +omega
+      :padding 4px 6px
+      :border= !border_for_notice
+      +rounded_corners
+    div.flash.error
+      :color #8a1f11
+      :background #FFF6BF
+      :border-color #FFD324
+    div.flash.notice
+      :color #514721
+      :background #FFF6BF
+      :border-color #FFD324
+    #admin_menu
+      +grid(16)
+      +alpha
+      +omega
+      :padding-top 0.3em
+      :padding-bottom 0.3em
+    #admin_section
+      +grid(16)
+      +alpha
+      +omega
+      :padding-bottom 1em
+      #user-profile-avatar
+        +grid(3, 16)
+      #user-profile-details
+        +grid(11, 16)
+      #tabs
+        :margin-bottom 1em
+      .wufoo
+        .ui-datepicker-trigger
+          :margin-left 0.3em
+          :margin-top 0.1em
+          :cursor pointer
+        span.buttons
+          :padding-right 0.5em
+          input, button
+            :padding 2px 3px
+        ul.tabs_container
+          :margin 6px 0px
+          :padding 0px 10px
+          :margin-bottom 0
+          :width auto
+          li
+            :float left
+            :clear none
+            :width auto
+            a
+              :font-size 0.9em
+              :font-weight normal
+#footer
+  hr
+    :margin 0
+    :padding-bottom 15px
+  a
+    :font-size 0.9em
+    
+html body
+  :line-height 1.5em

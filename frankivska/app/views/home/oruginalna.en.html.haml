@@ -1,0 +1,15 @@
+- title "Original"
+
+%h1 Production Line
+
+= image_tag 'general/oruginalna.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block', :style => "padding: 0; width: 250px"}
+  %h1.black_text.vodka_name Frankivska Original  
+  %div.description this is the vodka the taste of which gives the feeling of ease.
+  %div.micnist Strength: 40%; 
+  %div.mistkist Holding Capacity: 0,25l; 0,5l; 0,75l.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');

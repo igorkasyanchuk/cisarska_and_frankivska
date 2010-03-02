@@ -1,0 +1,55 @@
+- title 'Награды'
+
+%h1 Награды
+
+%p
+  %strong
+    Продукция предприятия должным образом оцененная экспертами отрасли, 
+    в частности в национальном рейтинге «Лучший отечественный товар года», и в программе «Национальная конкурентоспособность», 
+    а также признана одной из лучших на международном дегустационном конкурсе «United vodka».
+
+%div#awards_list
+  %div
+    - (1...5).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+    - (5...9).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+  %div      
+    = (link_to (image_tag "cisarska/diploma/diploma-uv-classic-ramka-small.png"), "/images/cisarska/diploma/diploma-uv-classic-ramka-big.png", :class => 'colorbox')
+    = (link_to (image_tag "cisarska/diploma/diploma-uv-serbian-ramka-small.png"), "/images/cisarska/diploma/diploma-uv-serbian-ramka-big.png", :class => 'colorbox')
+    = (link_to (image_tag "cisarska/diploma/diploma-uv-bucovivian-ramka-small.png"), "/images/cisarska/diploma/diploma-uv-bucovivian-ramka-big.png", :class => 'colorbox')
+  %div
+    - (1..3).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/Award-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+  %div
+    - (4..6).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/Award-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+
+%ul
+  %li
+    Лучший Отечественный товар 2008 года – Цисарска Галицка Класична 
+  %li
+    Лучший Отечественный товар 2008 года – Цисарска Буковинска Пшенична 
+  %li
+    Лучший Отечественный товар 2008 года – Бальзам "Прикарпатский"
+  %li
+    Лучший Отечественный товар 2007 года – Цисарска Галицка Класична
+  %li
+    Производитель лучших отечественных товаров 2008 года – ЛВЗ СТК
+  %li
+    %div
+      %strong Программа Национальная Конкурентоспособность 2007 г.
+    Знак соответствия -   «Знак безупречности» Цисарска Галицка Класична
+  %li
+    %strong "Лучший продукт года 2007"
+  %li
+    %div
+      %strong Международная выставка- ярмарка «Агро-2008»  -ТМ «Цесарская»
+    Лучшая экспортноспособная  ТМ в экспозициях областей Украины
+
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#awards_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');
+  

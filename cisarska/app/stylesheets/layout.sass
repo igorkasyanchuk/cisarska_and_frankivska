@@ -1,0 +1,43 @@
+@import grid.sass
+@import text.sass
+
+.no_top_padding
+  :padding-top 0
+
+.no_bottom_padding
+  :padding-top 0
+  
+.no_top_margin
+  :margin-top 0
+
+.no_bottom_margin
+  :margin-top 0
+
+.column1_1
+  +grid(16)
+  +alpha
+  +omega
+  
+.column1_2
+  +grid(8, 16)
+
+.column1_3
+  +grid(5, 15)
+  
+.column2_3
+  +grid(10, 15)
+  
+.column1_4
+  +grid(4, 16)
+
+.column3_4
+  +grid(12, 16)
+  
+.column1_3_no_alpha_omega
+  +grid(5, 15)
+  :margin 0
+  :padding 8px
+  
+.center_block
+  :display block
+  :margin 0 auto

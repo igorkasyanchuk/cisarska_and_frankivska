@@ -1,0 +1,7 @@
+- title "Головна"
+
+%div.center_block{:style => 'position: relative'}
+  = image_tag "cisarska/logo-main.png", :class => 'center_block', :style => 'padding-right: 150px; position: absolute; top: -100px; left: 140px'
+  
+- content_for :on_ready do
+  jQuery('#logo a img').hide();

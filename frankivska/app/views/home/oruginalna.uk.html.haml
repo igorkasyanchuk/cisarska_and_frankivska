@@ -1,0 +1,15 @@
+- title "Оригінальна"
+
+%h1 Лінія продукції
+
+= image_tag 'general/oruginalna.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block', :style => "padding: 0; width: 250px"}
+  %h1.black_text.vodka_name Франківська Оригінальна  
+  %div.description горілка, м’який смак якої дарує відчуття легкості.
+  %div.micnist Міцність: 38%; 
+  %div.mistkist Місткість: 0,25л; 0,5л; 0,75л.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');

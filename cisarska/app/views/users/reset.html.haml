@@ -1,0 +1,22 @@
+%div#centered_view_with_top_space
+  %div#block-signup.block
+    %h2= t('.reseting_message')
+    = error_messages_for :user
+    - form_for :user, :html => {:class => 'formtastic'} do |f|
+      %fieldset.inputs
+        %ol
+          %li.string
+            = f.label :email, t('activerecord.attributes.user.email')
+            = f.text_field :email
+          %li.string
+            %p
+              %strong= t('.enter_new_password')
+            = f.label :password, t('activerecord.attributes.user.password')
+            = f.password_field :password
+          %li.string
+            = f.label :password_confirmation, t('activerecord.attributes.user.password_confirmation')
+            = f.password_field :password_confirmation
+      %fieldset.buttons
+        %ol
+          %li.commit
+          = submit_tag t('reset_password_button'), :class => 'button', :id => 'reset_password_button', :alt => t('reset_password_button')

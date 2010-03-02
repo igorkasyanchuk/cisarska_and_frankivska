@@ -1,0 +1,125 @@
+!formtastic_label_width = 12em
+!formtastic_input_width = 18em
+
+=float-left
+  :float left
+=float-right
+  :float right
+=text-right
+  :text-align right
+=text-left
+  :text-align left
+
+form.formtastic
+  :font-size 0.9em
+  fieldset.inputs 
+    fieldset.inputs
+      fieldset
+        :border 0 none
+        legend
+          :border 0 none
+  fieldset
+    :width auto
+    :padding 0
+    :margin-bottom 0.3em
+    ol
+      ol
+        ol
+          :margin-left= !formtastic_label_width + 0.3em * 2
+          li
+            label
+              :float none
+  ol, ul
+    :list-style-type none
+    :margin 0.3em 2em
+    li
+      :margin 0.4em 0
+      label
+        +float-left
+        +text-right
+        :width= !formtastic_label_width
+        :padding 0 0.3em
+        :padding-right 0.8em
+        abbr
+          :color red
+          :text-decoration none
+          :border-bottom 0 none
+      input
+        :width= !formtastic_input_width
+      input[type='checkbox']
+        :height 1.5em
+        :width auto
+        :margin-left 0
+  fieldset.buttons
+    ol, ul
+      :margin-left= !formtastic_label_width + 2em + 0.3em * 2 + 0.3em
+      input
+        :width auto
+        :padding 0.1em 0.3em
+  span.field_with_errors
+    input, select, textarea
+      :border 1px solid red
+  #tabs 
+    ul.tabs_container
+      :margin 6px 0px
+      :padding 0px 10px
+      :margin-bottom 0
+      li
+        a
+          :font-size 0.9em
+          :font-weight normal
+  fieldset.inputs
+    ol
+      li.radio
+        label
+          :width auto
+        fieldset
+          :position relative
+          legend
+            :position absolute
+            span
+              :position absolute
+              :top 0.3em
+              :left 0
+              :text-align right
+              :width= !formtastic_label_width + 0.3em
+          ol
+            :margin-left= !formtastic_label_width + 0.3em * 2
+            li
+              :margin-top 0.1em
+              :margin-bottom 0.1em
+              :display inline
+              label
+                :padding 0
+                input[type='radio']
+                  :width auto
+
+#login_box
+  form.formtastic
+    input[type='checkbox']
+      :display inline
+                  
+div.errorExplanation
+  ul, ul li
+    :list-style-type decimal
+    
+html dd ol
+  :margin-top 0.3em
+  :margin-bottom 0.3em
+  
+html body
+  :line-height 1.5em
+  
+div.custom_form
+  div.row
+    div.label
+      :float left
+      :width= !formtastic_label_width
+      :text-align right
+      :padding-right 0.3em
+    div.field
+      :float left
+      label
+        :display inline
+    div.clear
+      :clear both   

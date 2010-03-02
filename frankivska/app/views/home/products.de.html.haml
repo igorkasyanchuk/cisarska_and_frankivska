@@ -1,0 +1,12 @@
+- title "Produktionslinie"
+
+%h1 Produktionslinie
+%p
+  %div.vodka_list
+    - ['luksova', 'oruginalna', 'sriblasta', 'lagidna', 'gostunna', 'z_pertcem'].each do |v|
+      = (link_to (image_tag "general/small/#{v}.png"), :controller => 'home', :action => v )
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

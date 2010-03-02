@@ -1,0 +1,15 @@
+- title "З перцем"
+
+%h1 Лінія продукції
+
+= image_tag 'general/z_pertcem.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Франківська з Перцем
+  %div.description ароматний спирт запашного перцю та злегка відчутні нотки лимону створили горілку, що давно є символом українського духу.
+  %div.micnist Міцність: 40%; 
+  %div.mistkist Місткість: 0,5л.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

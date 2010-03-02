@@ -1,0 +1,46 @@
+- title "Prykarpathian Balsam"
+
+%h1.gold_text Prykarpathian Balsam
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block gold_text', :style => 'padding-right: 10px'}
+  %h1.black_text.vodka_name.gold_text{:style => 'padding-right: 10px'} 
+    %strong.gold_text Balsam
+    %i Prykarpathian 
+  %div.description.gold_text{:style => 'padding-right: 10px'} 
+    %p
+      Legendary drink from 
+      %br
+      the national treasury of recipes,
+      %br
+      each drop of which embodies
+      %br
+      the natural wealth 
+      %br
+      of the Carpathians.
+    %p
+      Made with a 16-plant components,
+      %br
+      including extract of 
+      %br
+      mountain herbs, balm 
+      %br
+      has the original taste
+      %br
+      and unparalleled
+      %br
+      powerful tonic effect.
+  %div.micnist.gold_text{:style => 'padding-right: 10px'} 
+    %div.gold_text Strength: 45%;
+  %div.mistkist.gold_text{:style => 'padding-right: 10px'} 
+    %div.gold_text Holding Capacity: 0,5 l.
+
+= image_tag 'cisarska/balzam.png', :style => 'float: left; padding-top: 10px; padding-bottom: 50px;'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#balzam_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');
+  jQuery('#balzam_bg').height(jQuery(document).height());

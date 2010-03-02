@@ -1,0 +1,65 @@
+- title 'Auszeichnungen'
+
+%h1 Auszeichnungen
+
+%p
+  %strong
+    Die Produktion des Unternehmens ist von Experten in diesem Bereich in entsprechender Weise bewertet, 
+    und zwar im nationalen Rating „Der beste Inlandsprodukt des Jahres“ und im Programm „Nationale Konkurrenzfähigkeit“, 
+    sowie auch im internationalen degustativen Wettbewerb „United vodka“ als eine von den besten anerkannt.
+
+%div#awards_list
+  %div
+    - (1...5).to_a.each do |n|
+      = (link_to (image_tag "frankivska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/frankivska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+    = (link_to (image_tag "/images/general/diploma-uv-ramka-small.png"), "/images/general/diploma-uv-ramka-big.png", :class => 'colorbox')
+    - (5...9).to_a.each do |n|
+      = (link_to (image_tag "frankivska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/frankivska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+  %div
+    - (1..3).to_a.each do |n|
+      = (link_to (image_tag "frankivska_#{I18n.locale}/Award-#{n}-small.png"), "/images/frankivska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+  %div
+    - (4..6).to_a.each do |n|
+      = (link_to (image_tag "frankivska_#{I18n.locale}/Award-#{n}-small.png"), "/images/frankivska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+
+%ul
+  /
+    %li
+      Der beste Inlandsprodukt 2008 – Zissarska Galyzka Klassytschna
+    %li
+      Der beste Inlandsprodukt 2008 – Zissarska Bukowynska Pschenytschna
+    %li
+      Der beste Inlandsprodukt 2008 – «Prykarpatskyj balsam»
+  %li
+    Der beste Inlandsprodukt 2008 – Frankiwska Lagidna
+  %li
+    Der beste Inlandsprodukt 2007 – Frankiwska Luxowa
+  /
+    %li
+      Der beste Inlandsprodukt 2007 – Zissarska Galyzka Klassytschna
+  %li
+    Der beste Inlandsprodukt 2007 – Frankiwska s Perzem
+  %li
+    Erzeuger der besten Inlandsprodukte 2008  – Spirituosenwerk von TOV„Stanislawska torgowa kompanija“
+  %li
+    %div
+      %strong Programm „Nationale Konkurrenzfähigkeit 2007“
+    Übereinstimmungszeichen – „Perfektionszeichen“  - Zissarska Galyzka Klassytschna
+  %li
+    %div
+      %strong Programm „Nationale Konkurrenzfähigkeit 2007“
+    Übereinstimmungszeichen -  „Nationale Traditionen“ – Frankiwska Oryginalna
+  %li
+    %strong „Der beste Produkt des Jahres 2007“ 
+  /
+    %li
+      %div
+        %strong Internationale Ausstellung-Messe „Agro-2008“ - HM «Zissarska»
+      Die beste exportfähige Handelsmarke in Expositionen von den Gebieten der Ukraine.
+
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#awards_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');
+  

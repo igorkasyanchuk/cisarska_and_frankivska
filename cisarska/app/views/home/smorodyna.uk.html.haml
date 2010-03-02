@@ -1,0 +1,37 @@
+- title "Цісарська Австрійська Чорна смородина"
+
+%h1 Лінія продукції
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Цісарська Австрійська Чорна смородина
+  %div.description 
+    %p
+      це унікальна рецептура, 
+      %br 
+      що передбачає 
+      %br
+      пом’якшення ароматним 
+      %br 
+      спиртом плодів 
+      %br
+      чорної смородини. 
+      %br 
+    %p
+      Створена на основі 
+      %br 
+      спирту вищого класу 
+      %br
+      «Люкс».
+  %div.micnist Міцність: 40%;
+  %div.mistkist Місткість: 0,5л.
+
+= image_tag 'cisarska/page/smorodyna.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/smorodyna.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

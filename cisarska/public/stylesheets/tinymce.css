@@ -1,0 +1,20 @@
+.mceContentBody {
+  background:#FFFFFF;
+  font-family:'Lucida Grande',Verdana,Arial,Helvetica,sans-serif;
+  font-size: 0.85em;
+  font-weight:normal;
+  margin:8px 12px;
+  padding:0;
+}
+
+.mceContentBody p {
+  margin: 2px 0;
+}
+
+#regional_center_full_description_tbl {
+  width: 700px;
+}
+
+body#mceSpanFonts.mceContentBody{
+  width:540px;
+}

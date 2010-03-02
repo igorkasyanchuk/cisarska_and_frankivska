@@ -1,0 +1,34 @@
+ru:
+  activerecord:
+    models:
+      contact: "Связь с нами"
+    attributes:
+      user:
+        login: 'Логин'
+        email: 'Емейл'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        first_name: "Имя"
+        last_name: Фамилия
+        age: Вік
+        gender: Стать
+        avatar: Фото 
+      contact:
+        name: "Имя"
+        body: Сообщение
+        email: Емейл
+  company_link: Компания
+  products_link: Продукция
+  quality_link: Защита качества
+  contact_link: Контакты
+  post_contact_message: Написать сообщение
+  history_link: История
+  dynamic_link: Динамика развития
+  awards_link: Награды
+  productions_ext_link: Производство
+  contact_details_link: "Связь с нами"
+  linia_productions: Линейка продукции
+  cisarska: Цесарськая
+  balzam: Прикарпатский Бальзам
+  frankivska: Франкивска
+  cisarska: Цисарска

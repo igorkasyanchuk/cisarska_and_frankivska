@@ -1,0 +1,48 @@
+- title "Dynamics of Development"
+
+%h1 Dynamics of Development
+
+%div{:style => 'float: left;'}
+  %ul.certificates_list
+    %li= (link_to (image_tag "cisarska_#{I18n.locale}/certificate_3.png"), "/images/cisarska_#{I18n.locale}/certifikate-big-3.png", :class => 'colorbox')
+    %li= (link_to (image_tag "cisarska_#{I18n.locale}/certificate_4.png"), "/images/cisarska_#{I18n.locale}/certifikate-big-4.png", :class => 'colorbox')
+
+%p
+  %strong During the three years of its work the factory considerably enlarged its amount of selling, as the result – production enlarged as well. 
+
+%p
+  %i
+    %strong For the comparison:  
+%p
+  for January-October the amount of production was – 562,7 thousand dal , and for ten months of the year 2009 – 1068,4 thousand dal,
+  and this is 89% of the enlargement of production. 
+
+%div.spacer
+
+%div.clear
+
+%div{:style => 'float: left;'}
+  %ul.certificates_list
+    %li= (link_to (image_tag "cisarska_#{I18n.locale}/certificate_5.png"), "/images/cisarska_#{I18n.locale}/certifikate-big-5.png", :class => 'colorbox')
+
+%p
+  The dynamic development is also shown by the fact that having occupied strong positions
+  at the Western-Ukrainian market since 2009 the enterprise began to appear on the National level 
+  and also to realize expert potential by the conquest markets of Russia and Armenia. 
+
+%p
+  Since next year the factory will continue to grow powers for an account of enlarging of the production
+  and appearing at the European market.
+
+%p
+  %i
+    %strong 
+      There is an certified in the international system DQS 
+      integral system of managing of quality and safety of food products according to the demands of ISO 9001-2009 and 22000:2005.
+  
+%div.spacer
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#dynamic_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');

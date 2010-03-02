@@ -1,0 +1,16 @@
+%div#flags_container
+  #flags_box
+    =# flag_link('ua', 'uk')
+    =# flag_link('ru', 'ru')
+    =# flag_link('gb', 'en')
+%div#logo
+  =# (link_to (image_tag 'logo_base.png'), root_path, :title => 'main_logo_link')
+  %h1= link_to 'EB5Info', root_path
+#nav_container
+  %ul#nav
+    - if logged_in?
+      %li= link_to t("dashboard_nav_link"), general_dashboard_path
+      %li= link_to t("logout_nav_link"), logout_path
+    - else
+      %li= link_to t("signup_nav_link"), signup_path
+      %li= link_to t("login_nav_link"), login_path

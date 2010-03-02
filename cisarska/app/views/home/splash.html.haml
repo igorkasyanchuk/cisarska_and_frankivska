@@ -1,0 +1,43 @@
+.column1_3_no_alpha_omega.blue_color.text_left{:style => 'border-right: 2px solid #ccc;'}
+  %div{:style => 'height: 7em'}
+    %p{:style => 'text-indent: 0'}
+      %strong Внимание!
+    %p.white_color{:style => 'text-indent: 0'}
+      Сайт содержит информацию,
+      не рекомендованную для лиц,
+      не достигших совершеннолетия.
+  %div.bold_text{:style => 'height: 3em'}
+    Достигли ли Вы
+    совершеннолетия?
+  %p{:style => 'text-indent: 0'}
+    = link_to 'ДА', i_am_18_years_old_path(:locale => :ru), :class => 'bold_text'
+    \|
+    = link_to 'НЕТ', i_am_not_18_years_old_path(:locale => :ru), :class => 'bold_text'
+.column1_3_no_alpha_omega.blue_color.text_center{:style => 'border-right: 2px solid #ccc;'}
+  %div{:style => 'height: 7em'}
+    %p{:style => 'text-indent: 0'}
+      %strong Увага!
+    %p.white_color
+      Сайт містить інформацію,
+      не рекомендовану для осіб,
+      які не досягли повноліття.
+  %div.bold_text{:style => 'height: 3em'}
+    Чи досягли Ви
+    повноліття?
+  %p{:style => 'text-indent: 0'}
+    = link_to 'ТАК', i_am_18_years_old_path(:locale => :uk), :class => 'bold_text'
+    \|
+    = link_to 'НІ', i_am_not_18_years_old_path(:locale => :uk), :class => 'bold_text'
+.column1_3_no_alpha_omega.blue_color.text_right
+  %div{:style => 'height: 7em'}
+    %p
+      %strong Warning!
+    %p.white_color
+      This site is intended
+      for legal age drinkers only.
+  %div.bold_text{:style => 'height: 3em'}
+    Are you of legal drinking age?
+  %p
+    = link_to 'YES', i_am_18_years_old_path(:locale => :en), :class => 'bold_text'
+    \|
+    = link_to 'NO', i_am_not_18_years_old_path(:locale => :en), :class => 'bold_text'

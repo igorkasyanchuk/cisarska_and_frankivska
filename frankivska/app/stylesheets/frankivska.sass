@@ -1,0 +1,275 @@
+!blue_color = #029CCD
+
+=nav_menu_item(!lang, !filename)
+  :background url(/images/frankivska_#{!lang}/#{!filename}) no-repeat top left    
+  :height 25px
+  :width 180px
+  :text-indent -9999px
+  &:hover
+    :background-position center left
+  &.selected_menu
+    :background-position bottom left
+
+=add_lang(!lang)
+  ul#main_nav
+    :list-style-type none
+    :padding 0
+    :margin 0
+    :padding-top 100px
+    li
+      :list-style-type none
+      :padding 0.4em 0
+    a
+      :display inline-block
+    #company_link
+      +nav_menu_item(!lang, "company.png")
+    #products_link
+      +nav_menu_item(!lang, "products.png")
+    #quality_link
+      +nav_menu_item(!lang, "quality-protection.png")
+      :width 222px
+    #contact_link
+      +nav_menu_item(!lang, "contact.png")
+      
+  ul.inside_nav
+    :display none
+    :font-size 0.9em
+    :padding 0
+    :padding-top 0.4em
+    :margin 0
+    li
+      :width 99%
+      :padding 0em 0
+      a
+        :padding-left 65px
+        :display block
+        :text-decoration none
+        &:hover
+          :text-decoration underline
+
+  .blue_color
+    :color= !blue_color
+    
+  .black_color
+    :color= #000
+    
+  a
+    :color= !blue_color
+  
+  a:hover
+    :color= !blue_color + #333
+    
+  .bold_text
+    :font-weight bold
+  
+  #root
+    #header
+      :padding-top 21px
+      :height 145px
+      
+  #footer
+    :position relative
+    
+  #top_view
+    :background url(/images/frankivska/line-top.png) repeat-x top center
+    :height 21px
+    :position absolute
+    :left 0
+    :top 0
+    :width 100%
+    
+  #footer_bottom
+    :background url(/images/frankivska/line-bottom.png) repeat-x top center
+    :height 21px
+    :position absolute
+    :left 0
+    :bottom 0
+    :width 100%
+    :z-index 1
+  
+  #splash_logo
+    :margin 0 auto
+    :padding-top 4em
+    :padding-bottom 2em
+    :width 150px
+    :padding-left 0px
+    
+  #logo
+    :padding-left 55px
+    :height 170px
+    :width 121px
+    :position absolute
+    :top 45px
+    :left 0
+    
+  html body
+    :font-size 0.9em
+    :font-family verdana
+    :background #fff url(/images/frankivska/line-top-bg.png) repeat-x scroll left top
+  html
+    :position relative
+    :z-index 100
+  #footer_bg_container
+    :z-index 0
+    :position absolute
+    :width 100%
+    :height 140px
+    :bottom 0px
+    :left 0
+    :background transparent url(/images/frankivska/line-bottom-bg.png) repeat-x scroll left bottom  
+  
+  #footer_water
+    :z-index 2
+    :position absolute
+    :width 100%
+    :height 140px
+    :bottom 0px
+    :left 0
+    :background transparent url(/images/frankivska/water-long-new.png) repeat-x scroll center top  
+    
+  #footer_copyright
+    :font-family arial,helvetica,serif
+    :text-align center
+    :font-size 0.9em
+    :z-index 3
+    :position absolute
+    :width 100%
+    :height 40px
+    :bottom 0px
+    :left 0
+    strong
+      :padding-left 100px 
+    
+  .vodka_list
+    a
+      :padding 4px 5px
+      
+  .certificates_list
+    :list-style-type none
+    :height 200px
+    li
+      :list-style-type none
+      :float left
+      :padding-right 15px      
+      
+  #header
+  #flags_box
+    :font-size 0.7em
+    :color= !blue_color
+    *
+      :font-size 0
+      :line-height 0
+    #uk
+      :background url(/images/frankivska/ua.png) no-repeat top left
+      :height 21px
+      :width 50px
+      &:hover
+        :background-position center left
+      &.selected_lang
+        :background-position bottom left
+    #ru
+      :background url(/images/frankivska/ru.png) no-repeat top left
+      :height 21px
+      :width 50px
+      &:hover
+        :background-position center left
+      &.selected_lang
+        :background-position bottom left
+    #en
+      :background url(/images/frankivska/en.png) no-repeat top left
+      :height 21px
+      :width 50px
+      &:hover
+        :background-position center left
+      &.selected_lang
+        :background-position bottom left
+    #de
+      :background url(/images/frankivska/de.png) no-repeat top left
+      :height 21px
+      :width 50px
+      &:hover
+        :background-position center left
+      &.selected_lang
+        :background-position bottom left
+        
+div.spacer
+  :padding-top 1em
+  :height 50px
+  :display block
+  
+#awards_list
+  :text-indent 0
+  div
+    img
+      :padding 8px 8px
+      
+#production_list
+  :float right
+  :width 395px
+  :margin-left 5px
+  img
+    :padding 2px 2px
+    
+#contact_block
+  h3  
+    :margin 0.3em
+
+html 
+  h1, h2, h3
+    :font-family arial,helvetica,serif
+    :color= !blue_color
+  h1
+    :font-size 2.0em
+  h2
+    :font-size 1.7em
+  h3
+    :font-size 1.4em
+  p
+    :text-indent 16px
+
+#root #content div.flash
+  :position absolute
+  :left 0
+  :top -120px
+  :width 590px
+  
+.vodka_page_block
+  :font-family verdana
+  :float right
+  :color black
+  :text-align right
+  :width 280px
+  :padding-right 40px
+  .vodka_name 
+    :font-family serif
+    :color black 
+    :text-align right
+    :line-height 1.3em
+    :font-size 2em
+  .description  
+    :font-family serif
+    :color black
+    :text-align right
+    :font-size 1.3em
+    :font-style italic
+    :font-weight bold
+    :padding-bottom 1em
+  .micnist
+    :font-family serif
+    :color black
+    :text-align right
+    :font-weight bold
+    :font-size 1.5em
+    :padding-bottom 0.5em
+  .mistkist
+    :font-family serif
+    :color black
+    :text-align right
+    :font-weight bold
+    :font-size 1.5em
+    
+form.formtastic ol li, form.formtastic ul li
+  :list-style-type none
+  
+html ol li
+  :list-style-type none

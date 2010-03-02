@@ -1,0 +1,41 @@
+- title "Zissarska Pflaumen"
+
+%h1 Produktionslinie
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Zissarska Pflaumen
+  %div.description 
+    %p
+      aufgrund von natürlichen 
+      %br
+      Komponenten erzeugt,
+      %br 
+      mit dem aromatischen  
+      %br
+      Alkohol von 
+      %br
+      Trockenpflaumen und
+      %br
+      Pflaumensaft weichgemacht. 
+      %br
+    %p
+      Das sehr ausgewogene  
+      %br 
+      Aroma und Geschmack 
+      %br 
+      schenken unvergessliche 
+      %br
+      Eindrücke.
+  %div.micnist Stärke 38%;
+  %div.mistkist Größe  0,5l.
+
+= image_tag 'cisarska/page/slyvova.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/slyvova.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

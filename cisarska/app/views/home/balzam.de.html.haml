@@ -1,0 +1,52 @@
+- title "Prykarpatskyj Balsam" 
+
+%h1.gold_text Prykarpatskyj Balsam 
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block gold_text', :style => 'padding-right: 10px'}
+  %h1.black_text.vodka_name.gold_text{:style => 'padding-right: 10px'} 
+    %strong.gold_text Balsam
+    %i Prykarpatskyj 
+  %div.description.gold_text{:style => 'padding-right: 10px'} 
+    %p
+      Das sagenhafte Getränk aus 
+      %br
+      der Schatzkammer der 
+      %br
+      nationalen Rezepte.
+      %br
+      Sein jeder Tropfen verwirklicht 
+      %br
+      in sich den natürlichen
+      %br
+      Reichtum der Karpaten. 
+    %p
+      Der Balsam ist aus  
+      %br
+      16 Pflanzenkomponenten hergestellt.
+      %br
+      Unter ihnen gibt es
+      %br
+      die Aufgüsse der Berggräser.
+      %br
+      Der Balsam hat den
+      %br
+      originellen unübertrefflichen 
+      %br
+      Geschmack und leistungsfähige
+      %br
+      tonische Wirkung.
+  %div.micnist.gold_text{:style => 'padding-right: 10px'} 
+    %div.gold_text Stärke: 45%;
+  %div.mistkist.gold_text{:style => 'padding-right: 10px'} 
+    %div.gold_text Größe: 0,5 l.
+
+= image_tag 'cisarska/balzam.png', :style => 'float: left; padding-top: 10px; padding-bottom: 50px;'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#balzam_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');
+  jQuery('#balzam_bg').height(jQuery(document).height());

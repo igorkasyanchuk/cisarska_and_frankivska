@@ -1,0 +1,15 @@
+%div#centered_view_with_top_space
+  %div#block-signup.block
+    %h2= t('.forgoting_message')
+    = error_messages_for :user
+    %p= t('.forgot_instructions')
+    - form_for :user, :html => {:class => 'formtastic'} do |f|
+      %fieldset.inputs
+        %ol
+          %li.string
+            = f.label :email, t('activerecord.attributes.user.email')
+            = f.text_field :email
+      %fieldset.buttons
+        %ol
+          %li.commit
+            = submit_tag t('reset_password_button'), :class => 'button', :id => 'reset_password_button', :alt => 'Відновити'

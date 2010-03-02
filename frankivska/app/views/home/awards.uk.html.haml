@@ -1,0 +1,65 @@
+- title 'Нагороди'
+
+%h1 Нагороди
+
+%p
+  %strong
+    Продукція підприємства належно оцінена експертами галузі, зокрема в національному рейтингу 
+    "Кращий вітчизняний товар року", та в програмі "Національна конкурентоспроможність", 
+    а також визнана однією з кращих на міжнародному дегустаційному конкурсі "United vodka".
+
+%div#awards_list
+  %div
+    - (1...5).to_a.each do |n|
+      = (link_to (image_tag "frankivska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/frankivska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+    = (link_to (image_tag "/images/general/diploma-uv-ramka-small.png"), "/images/general/diploma-uv-ramka-big.png", :class => 'colorbox')
+    - (5...9).to_a.each do |n|
+      = (link_to (image_tag "frankivska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/frankivska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+  %div
+    - (1..3).to_a.each do |n|
+      = (link_to (image_tag "frankivska_#{I18n.locale}/Award-#{n}-small.png"), "/images/frankivska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+  %div
+    - (4..6).to_a.each do |n|
+      = (link_to (image_tag "frankivska_#{I18n.locale}/Award-#{n}-small.png"), "/images/frankivska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+
+%ul
+  /
+    %li
+      Кращий Вітчизняний товар 2008 року – Цісарська Галицька Класична
+    %li
+      Кращий Вітчизняний товар 2008 року – Цісарська Буковинська Пшенична
+    %li
+      Кращий Вітчизняний товар 2008 року – Прикарпатський Бальзам
+  %li
+    Кращий Вітчизняний товар 2008 року – Франківська Лагідна
+  %li
+    Кращий Вітчизняний товар 2007 року – Франківська Люксова
+  /
+    %li
+      Кращий Вітчизняний товар 2007 року - Цісарська Галицька Класична
+  %li
+    Кращий Вітчизняний товар 2007 року – Франківська з Перцем
+  %li
+    Виробник кращих вітчизняних товарів 2008 року – ЛГЗ СТК
+  %li
+    %div
+      %strong Програма Національна Конкурентоспроможність 2007 р.
+    Знак відповідності - "Знак бездоганності" Цісарська Галицька Класична
+  %li
+    %div
+      %strong Програма Національна Конкурентоспроможність 2007 р.
+    Знак відповідності - "Національні традиції" - Франківська Оригінальна
+  %li
+    %strong "Кращий продукт року 2007"
+  /
+    %li
+      %div
+        %strong Міжнародна виставка-ярмарок "Агро-2008"  - ТМ "Цісарська"
+      Краща експортноспроможна ТМ в експозиціях областей України
+
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#awards_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');
+  

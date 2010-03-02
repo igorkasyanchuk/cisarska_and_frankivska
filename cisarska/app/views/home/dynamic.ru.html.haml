@@ -1,0 +1,47 @@
+- title "Динамика развития"
+
+%h1 Динамика развития 
+
+%div{:style => 'float: left;'}
+  %ul.certificates_list
+    %li= (link_to (image_tag "cisarska_#{I18n.locale}/certificate_3.png"), "/images/cisarska_#{I18n.locale}/certifikate-big-3.png", :class => 'colorbox')
+    %li= (link_to (image_tag "cisarska_#{I18n.locale}/certificate_4.png"), "/images/cisarska_#{I18n.locale}/certifikate-big-4.png", :class => 'colorbox')
+
+%p
+  %strong За три года своей работы завод существенно увеличил объемы продаж, в результате чего выросли и объемы производства. 
+
+%p
+  %i
+    %strong Для сравнения:  
+%p
+  за январь-октябрь 2008 года объем производства составлял 562,7 тыс. дал., а за 10 месяцев 2009 года – 1068,4 тыс. дал., 
+  а это 89% прироста объемов производства. 
+
+%div.spacer
+
+%div.clear
+
+%div{:style => 'float: left;'}
+  %ul.certificates_list
+    %li= (link_to (image_tag "cisarska_#{I18n.locale}/certificate_5.png"), "/images/cisarska_#{I18n.locale}/certifikate-big-5.png", :class => 'colorbox')
+
+%p
+  О динамическом развитии свидетельствует и то, что заняв крепкие позиции на западноукраинском рынке  
+  с 2009 года предприятие начало выходить на национальный уровень, 
+  а также реализовывать экспортный потенциал завоеванием рынков Армении и России. 
+
+%p
+  Со следующего года предприятие будет наращивать мощности за счет расширения ассортимента и выхода на рынок Европы.
+
+%p
+  %i
+    %strong 
+      На предприятии действует сертифицированная в международной системе DQS 
+      интегрированная система управления качества и безопасности пищевых продуктов на соответствие требованиям ISO 9001-2008 и 22000:2005.
+  
+%div.spacer
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#dynamic_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');

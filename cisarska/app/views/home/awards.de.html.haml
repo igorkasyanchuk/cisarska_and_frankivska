@@ -1,0 +1,53 @@
+- title 'Auszeichnungen'
+
+%h1 Auszeichnungen
+
+%p
+  %strong
+    Die Produktion des Unternehmens ist von Experten in diesem Bereich in entsprechender Weise bewertet, 
+    und zwar im nationalen Rating „Der beste Inlandsprodukt des Jahres“ und im Programm „Nationale Konkurrenzfähigkeit“, 
+    sowie auch im internationalen degustativen Wettbewerb „United vodka“ als eine von den besten anerkannt.
+
+%div#awards_list
+  %div
+    - (1...5).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+    - (5...9).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+  %div      
+    = (link_to (image_tag "cisarska/diploma/diploma-uv-classic-ramka-small.png"), "/images/cisarska/diploma/diploma-uv-classic-ramka-big.png", :class => 'colorbox')
+    = (link_to (image_tag "cisarska/diploma/diploma-uv-serbian-ramka-small.png"), "/images/cisarska/diploma/diploma-uv-serbian-ramka-big.png", :class => 'colorbox')
+    = (link_to (image_tag "cisarska/diploma/diploma-uv-bucovivian-ramka-small.png"), "/images/cisarska/diploma/diploma-uv-bucovivian-ramka-big.png", :class => 'colorbox')
+  %div
+    - (1..3).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/Award-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+  %div
+    - (4..6).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/Award-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+
+%ul
+  %li
+    Der beste Inlandsprodukt 2008 – Zissarska Klassik
+  %li
+    Der beste Inlandsprodukt 2008 – Zissarska Bukowyna
+  %li
+    Der beste Inlandsprodukt 2008 – «Prykarpatskyj balsam»
+  %li
+    Der beste Inlandsprodukt 2007 – Zissarska Klassik
+  %li
+    %div
+      %strong Programm „Nationale Konkurrenzfähigkeit 2007“
+    Übereinstimmungszeichen – „Perfektionszeichen“  - Zissarska Galyzka Klassytschna
+  %li
+    %strong „Der beste Produkt des Jahres 2007“ 
+  %li
+    %div
+      %strong Internationale Ausstellung-Messe „Agro-2008“ - HM «Zissarska»
+    Die beste exportfähige Handelsmarke in Expositionen von den Gebieten der Ukraine.
+
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#awards_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');
+  

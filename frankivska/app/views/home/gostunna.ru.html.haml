@@ -1,0 +1,15 @@
+- title "Гостынна"
+
+%h1 Линейка продукции
+
+= image_tag 'general/gostunna.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Франкивска Гостынна  
+  %div.description мягкий едва ощутимый аромат кофе выделяет этот напиток среди сотни других. Эксклюзивная водка для тех, кого Вы хотите удивить.
+  %div.micnist Крепость: 38% 
+  %div.mistkist Объем: 0,25л; 0,5 л.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');  

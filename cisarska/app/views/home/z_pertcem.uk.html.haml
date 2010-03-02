@@ -1,0 +1,45 @@
+- title "Цісарська Угорська Червона паприка"
+
+%h1 Лінія продукції
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Цісарська Угорська Червона паприка
+  %div.description 
+    %p
+      настоянка приготовлена з 
+      %br
+      додаванням ароматних 
+      %br
+      спиртів перцю, 
+      %br 
+      паприки, гвоздики, 
+      %br 
+      а також натурального меду. 
+      %br
+    %p
+      Гармонійне поєднання 
+      %br
+      кожного з компонентів 
+      %br
+      вносить легкий 
+      %br
+      приємний аромат, 
+      %br
+      а настій червоного
+      %br
+      перцю додасть 
+      %br
+      гостроти відчуттів.
+  %div.micnist Міцність: 40%;
+  %div.mistkist Місткість: 0,5л.
+
+= image_tag 'cisarska/page/z_pertcem.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/z_pertcem.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

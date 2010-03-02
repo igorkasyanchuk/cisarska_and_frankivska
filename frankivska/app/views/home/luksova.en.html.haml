@@ -1,0 +1,15 @@
+- title "De Luxe"
+
+%h1 Production Line
+
+= image_tag 'general/luksova.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Frankivska De Luxe 
+  %div.description wonderful combination of classic recipe and modern technologies. This vodka is for those who values the quality.
+  %div.micnist Strength: 40%; 
+  %div.mistkist Holding Capacity: 0,25l; 0,5l; 0,75l.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

@@ -1,0 +1,2 @@
+ git pull; rake db:migrate; touch tmp/restart.txt; rm public/stylesheets/public_bundle.css; rm public/javascripts/public_bundle.js
+ 

@@ -1,0 +1,39 @@
+- title "Цисарска Чешска Сливова "
+
+%h1 Линейка продукции
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Цисарска Чешска Сливова 
+  %div.description 
+    %p
+      это водка создана на 
+      %br
+      натуральных компонентах,
+      %br 
+      смягченная ароматными 
+      %br
+      спиртами чернослива и 
+      %br
+      сливового сока.  
+      %br
+    %p
+      Удачно сбалансированный  
+      %br 
+      аромат и вкус 
+      %br 
+      подарит незабываемые 
+      %br
+      впечатления.
+  %div.micnist Крепость 38%;
+  %div.mistkist Обьем: 0,5л.
+
+= image_tag 'cisarska/page/slyvova.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/slyvova.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

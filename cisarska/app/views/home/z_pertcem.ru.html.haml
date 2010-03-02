@@ -1,0 +1,45 @@
+- title "Цисарска Венгерска Красная паприка"
+
+%h1 Линейка продукции
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Цисарска Венгерска Красная паприка
+  %div.description 
+    %p
+      настойка, приготовленная с  
+      %br
+      прибавкой ароматных 
+      %br
+      спиртов перца,  
+      %br 
+      паприки, гвоздики, 
+      %br 
+      а также натурального меда. 
+      %br
+    %p
+      Гармоническое совмещение 
+      %br
+      каждого из компонентов 
+      %br
+      вносит легкий 
+      %br
+      приятный аромат, 
+      %br
+      а настойка красного перца
+      %br
+      додаст 
+      %br
+      остроты ощущений.
+  %div.micnist Крепость 40%;
+  %div.mistkist Обьем: 0,5л.
+
+= image_tag 'cisarska/page/z_pertcem.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/z_pertcem.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

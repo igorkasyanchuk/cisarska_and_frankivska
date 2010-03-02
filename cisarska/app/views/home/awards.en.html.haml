@@ -1,0 +1,57 @@
+- title 'AWARDS'
+
+%h1 AWARDS
+
+%p
+  %strong
+    The production of the company is well valuated by experts of the brunch, 
+    especially in the nomination Best National Product of the Year and in the program National Competitiveness, 
+    and is acknowledged one of the best at the international tasting competition “United vodka”.
+
+%div#awards_list
+  %div
+    - (1...5).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+    - (5...9).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/diploma-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/diploma-#{n}-big.png", :class => 'colorbox')
+  %div      
+    = (link_to (image_tag "cisarska/diploma/diploma-uv-classic-ramka-small.png"), "/images/cisarska/diploma/diploma-uv-classic-ramka-big.png", :class => 'colorbox')
+    = (link_to (image_tag "cisarska/diploma/diploma-uv-serbian-ramka-small.png"), "/images/cisarska/diploma/diploma-uv-serbian-ramka-big.png", :class => 'colorbox')
+    = (link_to (image_tag "cisarska/diploma/diploma-uv-bucovivian-ramka-small.png"), "/images/cisarska/diploma/diploma-uv-bucovivian-ramka-big.png", :class => 'colorbox')
+  %div
+    - (1..3).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/Award-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+  %div
+    - (4..6).to_a.each do |n|
+      = (link_to (image_tag "cisarska_#{I18n.locale}/Award-#{n}-small.png"), "/images/cisarska_#{I18n.locale}/Award-#{n}-big.png", :class => 'colorbox')
+
+%ul
+  %li
+    Best National Product 2008 – Tsisarska Classic
+  %li
+    Best National Product 2008 – Tsisarska Whaet
+  %li
+    Best National Product 2008 – Prekarpathian Balsam
+  %li
+    Best National Product 2007 – Tsisarska Classic
+  %li
+    Best National Product 2007 – Frankivska with Pepper
+  %li
+    Producer of the best national products 2008 Alcoholic Beverage Plant "Stanislavska trading company” LLC.
+  %li
+    %div
+      %strong National Competitiveness Program 2007.
+    Compliance Sign – “Perfection Sign” Tsisarska Classic
+  %li
+    %strong Best Product 2007 
+  %li
+    %div
+      %strong International Exibition-Fair “AGRO 2008” Trade Mark Tsisarska
+    Best export able trade mark in displays in regions of Ukraine.
+
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#awards_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');
+  

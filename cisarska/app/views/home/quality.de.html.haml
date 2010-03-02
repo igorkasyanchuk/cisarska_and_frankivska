@@ -1,0 +1,24 @@
+- title "Qualitätssicherung"
+
+%h1 Qualitätssicherung
+
+%h4 Die von den Fachleuten des Werkes eingeführte Neuheit - dreifache Lasermarkierung ermöglicht den Schutz der Produktion von den Verfälschungen.
+
+%br
+
+%div
+  = image_tag "cisarska_#{I18n.locale}/protection_all_detailed.png"
+
+%p.clear
+  %ul
+    %li	das Datum auf der Kappe soll mit dem Datum auf der Flasche übereinstimmen;
+    %li	das Abfülldatum ist unter dem Datum auf der Kappe;
+    %li	das Abfülldatum, das auf dem Schutzring gedruckt wird, macht die Wiederverwendung unmöglich, da der Teil des Datums auf der Flasche bleibt.
+
+  
+%p
+  %strong 
+    
+
+- content_for :on_ready do
+  jQuery('#quality_link').addClass('selected_menu');

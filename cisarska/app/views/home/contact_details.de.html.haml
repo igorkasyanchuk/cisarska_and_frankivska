@@ -1,0 +1,28 @@
+- title "Kontakte"
+
+%h1 Kontakte
+
+#contact_block
+  %p
+    = image_tag 'map.png', :style => 'display: block'
+  %h3.text_center.white_text
+    Ukraine, 76006, Iwano-Frankiwsk, Promyslowa Str. 29
+  %h3.text_center.white_text
+    Tel/fax +38 (0342) 712-742
+  %h3.text_center.white_text
+    e-mail: 
+    = mail_to 'lgz@stk.if.ua'
+    
+  %div.left_align
+    %h3 Verkaufsabteilung:
+    %h3.white_text +38 (0342) 712-745
+  %div.right_align
+    %h3.text_right Marketingabteilung:
+    %h3.white_text.text_right +38 (0342) 712-185
+  %div.clear
+  
+%div.spacer
+
+- content_for :on_ready do
+  jQuery('#contact_link').addClass('selected_menu');
+  jQuery('ul#contacts_nav').css('display', 'block');    

@@ -1,0 +1,11 @@
+- title "Зв'язок з нами"
+
+%h1 Зв'язок з нами
+
+%p
+  = render :partial => '/feedback/form'
+
+- content_for :on_ready do
+  jQuery('#contact_link').addClass('selected_menu');
+  jQuery('#contact_details_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#contacts_nav').css('display', 'block');

@@ -1,0 +1,15 @@
+- title "Оригинальна"
+
+%h1 Линейка продукции
+
+= image_tag 'general/oruginalna.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block', :style => "padding: 0; width: 250px"}
+  %h1.black_text.vodka_name Франкивска Оригинальна   
+  %div.description водка, мягкий вкус которой дарит ощущение легкости.
+  %div.micnist Крепость: 38%; 
+  %div.mistkist Объем: 0,25л, 0,5 л, 0,75л.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');

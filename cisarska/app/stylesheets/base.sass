@@ -1,0 +1,56 @@
+@import compass.sass
+@import compass/utilities/general.sass
+@import compass/utilities/links.sass
+@import compass/utilities/lists.sass
+@import compass/utilities/print.sass
+@import compass/utilities/sprites.sass
+@import compass/utilities/tables.sass
+@import compass/utilities/text.sass
+
+@import grid.sass
+@import text.sass
+
+@import reset.sass
+
+@import fonts.sass
+@import buttons.sass
+@import formtastic.sass
+@import tables.sass
+@import layout.sass
+
+=attach_footer( !footer_height )
+  :height 100%
+  body
+    :margin 0
+    :padding 0
+    :width 100%
+    :height 100%
+    :color #333
+    :text-align center
+  #root
+    :text-align left
+    :min-height 100%
+    :margin-bottom  = -!footer_height
+    +clearfix
+    #root_footer
+      :clear both
+      :height = !footer_height
+  #footer
+    :text-align left
+    :clear            both
+    :position         relative
+    :height         = !footer_height
+    #footer_container
+      +grid-system
+
+!base_color = #887733
+
+html
+  +global-reset
+  +attach_footer( 30px )
+  +tag-cloud
+  +fonts
+  :font-size 14px
+
+a
+  +link-colors(#1D75BB, #1D75CC)

@@ -1,0 +1,28 @@
+- title "Contacts"
+
+%h1 Contacts
+
+#contact_block
+  %p
+    = image_tag 'map.png', :style => 'display: block'
+  %h3.text_center.black_text
+    Ukraine, 76006, Ivano-Frankivsk, 29 Promyslova str.
+  %h3.text_center.black_text
+    Tel/fax +38 (0342) 712-742
+  %h3.text_center.black_text
+    e-mail: 
+    = mail_to 'lgz@stk.if.ua'
+    
+  %div.left_align
+    %h3 Sales department:
+    %h3.black_text +38 (0342) 712-745
+  %div.right_align
+    %h3.text_right Marketing department:
+    %h3.black_text.text_right +38 (0342) 712-185
+  %div.clear
+  
+%div.spacer
+
+- content_for :on_ready do
+  jQuery('#contact_link').addClass('selected_menu');
+  jQuery('ul#contacts_nav').css('display', 'block');    

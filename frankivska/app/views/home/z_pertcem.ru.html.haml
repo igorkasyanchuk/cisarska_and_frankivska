@@ -1,0 +1,15 @@
+- title "С Перцем"
+
+%h1 Линейка продукции
+
+= image_tag 'general/z_pertcem.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Франкивска с Перцем
+  %div.description ароматный спирт душистого перца и слегка ощутимые нотки лимона создали водку, которая давно является символом украинского духа.
+  %div.micnist Крепость: 40%; 
+  %div.mistkist Объем: 0,5л.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

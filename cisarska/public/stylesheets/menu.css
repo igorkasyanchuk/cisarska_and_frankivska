@@ -1,0 +1,42 @@
+/* menu styles */
+.horizontal_menu
+{	margin: 0;
+	padding: 0}
+
+	.horizontal_menu li
+	{	float: left;
+		list-style: none;
+		font: 12px Tahoma, Arial}
+
+	.horizontal_menu li a
+	{	display: block;
+		background: #324143;
+		padding: 5px 12px;
+		text-decoration: none;
+		width: auto;
+		color: #EAFFED;
+		white-space: nowrap}
+
+	.horizontal_menu li a:hover
+	{	background: #24313C}
+		
+		.horizontal_menu li ul
+		{	margin: 0;
+			padding: 0;
+			position: absolute;
+			visibility: hidden;
+			}
+		
+			.horizontal_menu li ul li
+			{	float: none;
+				display: inline}
+			
+			.horizontal_menu li ul li a
+			{	width: auto;
+				background: #459E00;
+				color: white}
+			
+			.horizontal_menu li ul li a:hover
+			{	background: #67b021;
+			  color: white;
+			}

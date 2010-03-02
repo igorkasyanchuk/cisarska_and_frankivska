@@ -1,0 +1,35 @@
+- title "Цисарска Буковинска Пшенична"
+
+%h1 Линейка продукции
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Цисарска Буковинска Пшенична
+  %div.description 
+    %p    
+      создана на базе  
+      %br
+      зернового спирта класса  
+      %br
+      «Люкс» и специально смягченной воды. 
+      %br
+    %p
+      Дополнительная фильтрация 
+      %br 
+      серебром наполняет  
+      %br
+      ее превосходными  
+      %br
+      вкусовыми качествами. 
+  %div.micnist Крепость 40%;
+  %div.mistkist Обьем: 0,5л.
+
+= image_tag 'cisarska/page/pshenychna.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/pshenychna.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

@@ -1,0 +1,15 @@
+- title "Лагідна"
+
+%h1 Лінія продукції
+
+= image_tag 'general/lagidna.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Франківська  Лагідна 
+  %div.description очистка сріблом та високоякісний спирт є запорукою м’якості та кришталевої чистоти цієї горілки. 
+  %div.micnist Міцність: 40%;
+  %div.mistkist Місткість: 0,25л; 0,5л; 0,75л.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

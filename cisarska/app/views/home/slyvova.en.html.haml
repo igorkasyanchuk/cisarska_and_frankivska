@@ -1,0 +1,39 @@
+- title "Tsisarska Plum "
+
+%h1 Products Line
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Tsisarska Plum 
+  %div.description 
+    %p
+      this vodka is produced on 
+      %br
+      the natural components,
+      %br 
+      is softened by 
+      %br
+      the fruit and 
+      %br
+      juice of plum.  
+      %br
+    %p
+      Well balanced  
+      %br 
+      the aroma and taste  
+      %br 
+      will give you unforgiving 
+      %br
+      feelings.
+  %div.micnist Strength: 38%;
+  %div.mistkist Holding Capacity: 0,5l.
+
+= image_tag 'cisarska/page/slyvova.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/slyvova.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

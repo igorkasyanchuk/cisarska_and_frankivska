@@ -1,0 +1,12 @@
+- title "Products"
+
+%h1 Products
+%p
+  %div.vodka_list.bottles
+    - ['klasychna', 'pshenychna', 'slyvova', 'smorodyna', 'domashnya', 'z_pertcem'].each do |v|
+      = (link_to (image_tag "cisarska/small/#{v}.png"), :controller => 'home', :action => v )
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

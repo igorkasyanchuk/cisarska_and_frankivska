@@ -1,0 +1,49 @@
+- title "Erzeugung"
+
+%h1 Erzeugung
+
+%h4
+  %strong Die Erzeugung der hochwertigen Produktion ist ohne Vereinigung der Faktoren, wie moderne Ausstattung, 
+  ständige Kontrolle und festes Team von Fachleuten unmöglich. Eben solches kompromisslose Herangehen ermöglichte die Erzeugung der Produktion, 
+  die die meist wählerischen Bedürfnissen des Verbrauchers befriedigt. 
+%p Der ganze Prozess der Erzeugung der Wodkagetränke im Werk ist automatisiert. Die Ausstattung ist aus rostfreiem Stahl, erzeugt von den Welterzeugern von Ausstattung für die Nahrungsmittelindustrie aus Frankreich, Italien, der USA.
+
+%div#production_list
+  - (1..6).to_a.each do |n|
+    = image_tag "cisarska_#{I18n.locale}/foto-production-#{n}.png"
+
+%p 
+  %i Der ganze Prozess der Erzeugung der Wodkagetränke im Werk ist automatisiert. 
+  Die Ausstattung ist aus rostfreiem Stahl, erzeugt von den Welterzeugern von Ausstattung für die Nahrungsmittelindustrie aus Frankreich, Italien, der USA.
+  Zur Wodkaerzeugung benutzt Lviver Wodkafabrik die Spiritusse von Höchstqualität von den besten Erzeugern der Ukraine.
+  Die Erzeugung von Wodka ist ein hochtechnologisches Prozess, für den, außer dem hochwertigen Spiritus noch ein speziell vorbereitetes Wasser nötig ist. 
+  Die beiden Faktoren beeinflussen unmittelbar die Qualität der Produktion. 
+  Die mehrstufige Wasserreinigung und -enthärtung wird von der Ausstattung der Firma „Gulligan“ (USA) gesichert. 
+  Nur ein paar Werke in der Ukraine zeigen derartiges Technologieniveau und verwenden die Ausstattung von solcher Klasse.
+%p 
+  Im Juni 2008 wurde im Werk die Kühlanlage in Betrieb genommen, die die Einhaltung der Optimumtemperatur in allen Etappen des Arbeitsvorganges voraussieht, 
+  was die Verbesserung der organoleptischen und chemisch-physikalischen Werte der Produktion sicherstellt. 
+  Noch eine wichtige Etappe ist die Reinigung über die Anlage “Silberfiltration“, nach der in schon gereinigten Wodka die Bestandteile hinzugefügt werden, 
+  die Wodka in die klassische oder besondere Wodkas umwandeln.
+%p
+  %strong Zur Vorbereitung der Bestandteile werden ausschließlich natürliche Rohstoffe benutzt. 
+  Keine chemischen Stoffe, betonen die Fachleute des Werkes. 
+  Alle Rohstoffe, die in die Produktion eingeht – Zucker, Honig, Glukose, Limonen-, Kreuzkümmel-, Paprikafrüchte, Äste und Blätter der Johannisbeere und Kirsche, 
+  Pflaumen-, Schneeball-, Vogelbeerensaft u. a. sind zertifiziert und entsprechen den Qualitätsanforderungen- und Sicherheitsvorschriften. 
+  Aus den Pflanzenkomponenten werden im Werk aromatische Spiritusse (für besondere Wodkas) und Aufgüsse (für Balsame) erzeugt. 
+  %strong Vor dem Abfüllen geht die Produktion über die Endmikrofiltration und das Polieren- Ein wichtiger Schutzgrad ist dreifache Lasermarkierung auf der Kappe und Flasche.
+%p 
+  Der Erzeugung der hochwertigen Produktion hilft die Laborkontrolle, die in jeder Etappe
+  der Produktion geführt wird - von der Prüfung des Eingansrohstoffes zur Erzeugung der Fertigproduktion. 
+  Das Labor des Werkes ist mit moderner Laborausstattung ausgestattet, die die Qualität und Sicherheit der Produktion im 
+  Laufe des ganzen Produktionszyklus sicherzustellen ermöglicht. 
+%h4 Alles zusammen zeugt vom hohen Niveau der Organisation der Produktionssteuerung und Qualitätssicherung.
+    
+
+%div.clear
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#productions_ext_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');
+

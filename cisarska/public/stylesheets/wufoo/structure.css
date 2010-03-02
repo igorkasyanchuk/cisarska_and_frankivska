@@ -1,0 +1,14 @@
+/* - - - - - - - - - - - - - - - - - - - - -
+
+Title : Wufoo Form Structure
+Author : Infinity Box Inc.
+URL : http://wufoo.com
+
+- - - - - - - - - - - - - - - - - - - - - */
+form.wufoo {
+  font-size: 16px;
+}
+
+.hide{
+	display:none !important;
+}

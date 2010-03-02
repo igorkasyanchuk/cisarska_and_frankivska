@@ -1,0 +1,34 @@
+- title "Цисарска Галицка Класична"
+
+%h1 Линейка продукции
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Цисарска Галицка Класична
+  %div.description 
+    %p
+      современный пример  
+      %br
+      настоящей чистой 
+      %br
+      водки воспроизведен 
+      %br
+      из древних рецептов. 
+    %p
+      Создана на базе 
+      %br
+      спирта высшего класса  
+      %br
+      «Люкс».
+  %div.micnist Крепость: 40%;
+  %div.mistkist Обьем: 0,5л.
+
+= image_tag 'cisarska/page/klasychna.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/klasychna.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

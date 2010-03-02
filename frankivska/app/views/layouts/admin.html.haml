@@ -1,0 +1,43 @@
+= title "#{controller_name.capitalize.humanize} - #{action_name.humanize.downcase}"
+- content_for :on_ready do
+  initialize_horizontanl_menu();
+
+- inside_layout 'application' do
+  %ul#admin_menu.horizontal_menu
+    %li= link_to t("dashboard_menu"), general_dashboard_path
+    %li= link_to t("profile"), general_user_path(current_user)
+    - if current_user.admin?
+      %li
+        = link_to t("management"), '#'
+        %ul
+          %li= link_to t("all_users", :users_count => User.count), admin_users_path
+          %li= link_to t('activities_menu'), admin_activities_path
+    - if current_user.admin? || current_user.regional_center?
+      %li
+        = link_to t('regional_center_menu'), '#'
+        %ul
+          %li= link_to t('regional_centers_link', :count => current_user.own_regional_centers.size), admin_regional_centers_path
+          - if current_user.admin?           
+            %li= link_to t('industries_link', :count => Industry.count), admin_industries_path
+            %li= link_to t('manage_access_link'), manage_access_admin_regional_centers_path
+    - if current_user.admin?
+      %li
+        = link_to t('attorneys_menu'), '#'
+        %ul
+          %li= link_to t('attorneys_link', :count => Attorney.count), admin_attorneys_path
+          %li= link_to t('practice_areas_link', :count => PracticeArea.count), admin_practice_areas_path
+          %li= link_to t('languages_link', :count => Language.count), admin_languages_path
+    - if current_user.admin?
+      %li
+        = link_to t("contact_us_link"), '#'
+        %ul
+          %li= link_to t("pending_messages", :count => Contact.pending.count), moderator_contacts_path(:pending => true)
+          %li= link_to t("archile_menu_link", :count => Contact.archive.count), moderator_contacts_path(:archive => true)
+    - if current_user.only_investor?
+      %li
+        = link_to t("investor_link"), '#'
+    - if current_user.only_attorney?
+      %li
+        = link_to t("attorney_link"), '#'
+  %div#admin_section
+    = yield

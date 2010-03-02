@@ -1,0 +1,16 @@
+!!! XML
+!!!
+
+%html{html_attrs}
+  %head
+    %title= yield :title
+    = stylesheet_link_tag 'blueprint/screen', 'application', :media => 'screen, projection'
+  %body
+    %div#wrapper
+      %div#content
+        = yield
+        %div.clear
+    %div#footer
+      %hr
+      %div#copy
+        Site &copy;

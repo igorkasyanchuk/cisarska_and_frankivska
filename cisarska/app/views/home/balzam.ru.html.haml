@@ -1,0 +1,48 @@
+- title "Бальзам Прикарпатский"
+
+%h1.gold_text Бальзам Прикарпатский
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block gold_text', :style => 'padding-right: 10px'}
+  %h1.black_text.vodka_name.gold_text{:style => 'padding-right: 10px'} 
+    %strong.gold_text Бальзам
+    %i Прикарпатский 
+  %div.description.gold_text{:style => 'padding-right: 10px'} 
+    %p
+      Легендарный напиток из сокровищницы
+      %br
+      национальных рецептов,
+      %br
+      каждая капля которого воплощает
+      %br
+      в себе природное 
+      %br
+      богатство Карпат. 
+    %p
+      Изготовлен из 16-ти
+      %br
+      растительных компонентов,
+      %br
+      среди которых настои
+      %br
+      горных трав, бальзам 
+      %br
+      имеет оригинальный непревзойденный  
+      %br
+      вкус и мощное  
+      %br
+      тонизирующее действие.
+  %div.micnist.gold_text{:style => 'padding-right: 10px'} 
+    %div.gold_text Крепость: 45%;
+  %div.mistkist.gold_text{:style => 'padding-right: 10px'} 
+    %div.gold_text Объем: 0,5л.
+
+= image_tag 'cisarska/balzam.png', :style => 'float: left; padding-top: 10px; padding-bottom: 50px;'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#balzam_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');
+  jQuery('#balzam_bg').height(jQuery(document).height());

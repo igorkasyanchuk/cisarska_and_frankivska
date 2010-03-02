@@ -1,0 +1,33 @@
+uk:
+  activerecord:
+    models:
+      contact: "Зв'язок з нами"
+    attributes:
+      user:
+        login: 'Логін'
+        email: 'Емейл'
+        password: 'Пароль'
+        password_confirmation: 'Підтвердження паролю'
+        first_name: "Ім'я"
+        last_name: Прізвище
+        age: Вік
+        gender: Стать
+        avatar: Фото 
+      contact:
+        name: "Ім'я"
+        body: Повідомлення
+        email: Емейл
+  company_link: Компанія
+  products_link: Продукція
+  quality_link: Захист якості
+  contact_link: Контакти
+  post_contact_message: Написати повідомлення
+  history_link: Історія
+  dynamic_link: Динаміка розвитку
+  awards_link: Нагороди
+  productions_ext_link: Виробництво
+  contact_details_link: "Зв'язок з нами"
+  linia_productions: Лінія продукції
+  balzam: Прикарпатський Бальзам
+  frankivska: Франківська
+  cisarska: Цісарська

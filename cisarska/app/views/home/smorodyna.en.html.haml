@@ -1,0 +1,37 @@
+- title "Tsisarska Black Current"
+
+%h1 Products Line
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Tsisarska Black Current
+  %div.description 
+    %p
+      this is a unique, 
+      %br 
+      that provides  
+      %br
+      the soft aroma 
+      %br 
+      spirit of  
+      %br
+      the black current. 
+      %br 
+    %p
+      It is produced of  
+      %br 
+      the spirit of higher quality  
+      %br
+      "Lux".
+  %div.micnist Strength: 40%;
+  %div.mistkist Holding Capacity: 0,5l.
+
+= image_tag 'cisarska/page/smorodyna.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/smorodyna.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

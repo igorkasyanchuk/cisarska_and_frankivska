@@ -1,0 +1,61 @@
+!!!
+
+%html{html_attrs}
+  %head
+    == <title>#{(yield :title) || SEO[:title]}</title>
+    == <meta content="#{(yield :seo_description) || SEO[:description]}" name="description" />
+    == <meta content="#{(yield :seo_keywords) || SEO[:keywords]}" name="keywords" />
+    %meta{ 'http-equiv' => 'imagetoolbar', :content => 'no' }
+    %meta{ :name => 'distribution', :content => 'global' }
+    %meta{ :name => 'robots', :content => 'all' }
+    %meta{ :name => 'resource-type', :content => 'document' }
+    %meta{ :name => 'MSSmartTagsPreventParsing', :content => 'true' }
+    <meta content="uk-UA" http-equiv="Content-Language" />
+    <meta name="verify-v1" content="GOODLE" />
+    <meta name="y_key" content="YAHOO" />
+    <meta name='yandex-verification' content='YANDEX' />  
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <meta name="audience" content="all" />
+    <meta name="revisit-after" content="7 days" />
+    <meta content="Igor Kasyanchuk" name="author" />
+    <meta content="Group" name="classification"/>
+    <link type="image/x-icon" rel="shortcut icon" href="http://list.if.ua/favicon.ico" />
+    <link type="image/x-icon" rel="icon" href="http://list.if.ua/favicon.ico" />    
+    = stylesheet_link_tag 'wufoo/structure', 'wufoo/form', 'wufoo/theme', 'south-street/jquery-ui', 'menu', 'compiled/application', :cache => 'public_bundle'
+    = javascript_include_tag 'jquery', :cache => 'public_bundle'
+    /[if lt IE 7]
+      <script type="text/javascript" src="/javascripts/DD_belatedPNG_0.0.7a-min.js"></script>
+      <script type="text/javascript">
+      DD_belatedPNG.fix('.png_bg');
+      </script>
+    = yield :css
+    %style{:type => 'text/css'}
+      /* inline styles */
+      = yield :inline_css
+    = yield :map
+    = yield :js
+    = include_tiny_mce_if_needed
+    - javascript_tag do 
+      = "window._token = '#{form_authenticity_token}'"
+      = "window._auth_token_name = '#{request_forgery_protection_token}'"
+      = "window._auth_token = '#{form_authenticity_token}'"
+    %script{ :type => 'text/javascript', :charset => 'utf-8' }
+      jQuery.noConflict();
+      jQuery(document).ready(function() {
+      = yield :on_ready
+      })
+      = yield :inline_script   
+  %body
+    #root
+      #header
+        = render :partial => '/shared/header'
+      #content
+        = flash_messages
+        = yield
+      #root_footer
+    #footer
+      = render :partial => '/shared/footer'
+      - if Rails.env == 'production' && defined?(@collect_statistics) && @collect_statistics
+        %div#stat_counters
+          = render :partial => '/shared/ga'
+          = render :partial => '/shared/yandex'

@@ -1,0 +1,15 @@
+- title "Wodka mit Pfeffer"
+
+%h1 Produktionslinie
+
+= image_tag 'general/z_pertcem.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Frankivska Wodka mit Pfeffer 
+  %div.description ein aromatischer Alkohol des  duftenden Pfeffers und leicht spürbare Duftnoten der Zitrone haben den Wodka geschaffen, der seit langem zum Symbol des Ukrainischen Geistes geworden ist.
+  %div.micnist Stärke:  40%; 
+  %div.mistkist Größe:  0,5l.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

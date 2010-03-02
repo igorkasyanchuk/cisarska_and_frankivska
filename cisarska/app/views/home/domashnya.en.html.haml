@@ -1,0 +1,37 @@
+- title "Tsisarska Hospitable"
+
+%h1 Products Line
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Tsisarska Hospitable
+  %div.description 
+    %p
+      the original recipe 
+      %br
+      gives to this vodka 
+      %br
+      special. 
+      %br
+    %p
+      It is produced of the spirit 
+      %br
+      of higher quality "Lux"
+      %br
+      softened by aroma  
+      %br
+      spirit of cumin and 
+      %br
+      natural honey.
+  %div.micnist Strength: 40%;
+  %div.mistkist Holding Capacity: 0,5l.
+
+= image_tag 'cisarska/page/domashnya.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/domashnya.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

@@ -1,0 +1,37 @@
+- title "Цисарска Сербска Домашня"
+
+%h1 Линейка продукции
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Цисарска Сербска Домашня
+  %div.description 
+    %p
+      оригинальная рецептура 
+      %br
+      придает этой водке 
+      %br
+      особенной пикантности. 
+      %br
+    %p
+      Создана на базе спирта 
+      %br
+      высшего класса «Люкс» 
+      %br
+      смягченного ароматным  
+      %br
+      спиртом тмина и 
+      %br
+      натуральным медом.
+  %div.micnist Крепость 40%;
+  %div.mistkist Объем: 0,5л;
+
+= image_tag 'cisarska/page/domashnya.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/domashnya.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

@@ -1,0 +1,35 @@
+- title "Tsisarska Wheat "
+
+%h1 Products Line
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Tsisarska Wheat 
+  %div.description 
+    %p    
+      is produced on the basis 
+      %br
+      of grain spirit "Lux" quality 
+      %br
+      and specially soft water. 
+      %br
+    %p
+      Additional filtering 
+      %br 
+      of silver fulfils it 
+      %br
+      by incredible qualities  
+      %br
+      of taste. 
+  %div.micnist Strength: 40%;
+  %div.mistkist Holding Capacity: 0,5l.
+
+= image_tag 'cisarska/page/pshenychna.png', :style => 'float: left; padding-top: 10px'
+= image_tag 'cisarska/bg/pshenychna.png', :style => 'float: right; width: 347px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

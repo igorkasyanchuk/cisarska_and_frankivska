@@ -1,0 +1,70 @@
+!!!
+
+%html
+  %head
+    == <title>#{(yield :title) || SEO[:title]}</title>
+    == <meta content="#{(yield :seo_description) || SEO[:description]}" name="description" />
+    == <meta content="#{(yield :seo_keywords) || SEO[:keywords]}" name="keywords" />
+    %meta{ 'http-equiv' => 'imagetoolbar', :content => 'no' }
+    %meta{ :name => 'distribution', :content => 'global' }
+    %meta{ :name => 'robots', :content => 'all' }
+    %meta{ :name => 'resource-type', :content => 'document' }
+    %meta{ :name => 'MSSmartTagsPreventParsing', :content => 'true' }
+    <meta content="uk-UA" http-equiv="Content-Language" />
+    <meta name="verify-v1" content="GOODLE" />
+    <meta name="y_key" content="YAHOO" />
+    <meta name='yandex-verification' content='YANDEX' />  
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <meta name="audience" content="all" />
+    <meta name="revisit-after" content="7 days" />
+    <meta content="Igor Kasyanchuk" name="author" />
+    <meta content="Group" name="classification"/>
+    <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
+    <link type="image/x-icon" rel="icon" href="/favicon.ico" />    
+    = stylesheet_link_tag 'compiled/application', 'colorbox', :cache => 'public_bundle'
+    = stylesheet_link_tag "compiled/frankivska_#{I18n.locale}"
+    = javascript_include_tag 'jquery', 'application', 'jquery.colorbox-min', :cache => 'public_bundle'
+    /[if lt IE 7]
+      <script type="text/javascript" src="/javascripts/DD_belatedPNG_0.0.7a-min.js"></script>
+      <script type="text/javascript">
+      DD_belatedPNG.fix('.png_bg');
+      </script>
+    = yield :css
+    %style{:type => 'text/css'}
+      /* inline styles */
+      = yield :inline_css
+    = yield :map
+    = yield :js
+    %script{ :type => 'text/javascript', :charset => 'utf-8' }
+      = "window._token = '#{form_authenticity_token}'"
+      = "window._auth_token_name = '#{request_forgery_protection_token}'"
+      = "window._auth_token = '#{form_authenticity_token}'"
+      jQuery.noConflict();
+      jQuery(document).ready(function() {
+      = yield :on_ready
+      if (jQuery.browser.msie && /6.0/.test(navigator.userAgent)) {
+      jQuery('#footer').hide();
+      }
+      if (jQuery.browser.msie && /7.0/.test(navigator.userAgent)) {
+      
+      }
+      })
+      = yield :inline_script   
+  %body
+    #top_view
+    #root
+      #content
+        #splash_logo
+          = (link_to (image_tag "frankivska_#{I18n.locale}/logo-sign-in.png"), root_path)
+        = yield
+      #root_footer
+    #footer
+      #footer_bg_container
+      #footer_water
+      #footer_bottom
+      #footer_copyright
+        %strong Станіславська Торгова Компанія &reg;
+      #footer_container
+        = render :partial => '/frankivska/footer'
+      %div#stat_counters
+        = render :partial => '/shared/ga'

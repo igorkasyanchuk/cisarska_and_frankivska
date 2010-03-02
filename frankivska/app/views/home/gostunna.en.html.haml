@@ -1,0 +1,15 @@
+- title "Friendly"
+
+%h1 Production Line
+
+= image_tag 'general/gostunna.png', :style => 'float: left; height: 660px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block'}
+  %h1.black_text.vodka_name Frankivska Friendly
+  %div.description soft lightly felt coffee aroma differentiates this drink among hundreds of others. This is an exclusive vodka for those whom you want to surprise.
+  %div.micnist Strength: 38% 
+  %div.mistkist Holding Capacity: 0,25l; 0,5l.
+  
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#linia_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');  

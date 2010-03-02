@@ -1,0 +1,12 @@
+%div#centered_view_with_top_space
+  %div#block-signup.block
+    %h2= t('.new_user_registation')
+    %div
+      = @user.password = @user.password_confirmation = nil
+      = error_messages_for :user
+      - semantic_form_for @user do |form|
+        - form.inputs do
+          = render :partial => '/users/form', :locals => {:form => form}
+        - form.buttons do
+          = form.commit_button t('register_button'), :button_html => {:id => 'user_register'}, :alt => t('register_button')
+    

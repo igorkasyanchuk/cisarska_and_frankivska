@@ -1,0 +1,34 @@
+en:
+  activerecord:
+    models:
+      contact: "Contuct us"
+    attributes:
+      user:
+        login: 'Login'
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        first_name: "First name"
+        last_name: Surname
+        age: Age
+        gender: Gander
+        avatar: Avatar 
+      contact:
+        name: "Name"
+        body: Message
+        email: Email
+  company_link: Company
+  products_link: Products
+  quality_link: Quality Protection 
+  contact_link: Contacts 
+  post_contact_message: Post contact message
+  history_link: History
+  dynamic_link: Dynamic of development 
+  awards_link: Awards
+  productions_ext_link: Production
+  contact_details_link: "Contact us"
+  linia_productions: Products line
+  cisarska: Tsisarska
+  balzam: Prykarpathian Balsam 
+  frankivska: Frankivska
+  cisarska: Tsisarska

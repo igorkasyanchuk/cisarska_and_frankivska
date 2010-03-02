@@ -1,0 +1,46 @@
+- title "Production"
+
+%h1 Production
+
+%h4
+  %strong The production of qualitative production is impossible without combination of such factors as modern equipment,
+  constant control and solid team of professionals. This uncompromising approach gave opportunity to create production, 
+  that meets all the fastidious needs of the customer. 
+%p Vodka production is highly technological process, for which except spirit of high quality specially prepared water is also needed. Both factors directly influence the quality of the product. Multistage purifying and softening of the water ensures equipment of  Gulligan ( the USA) company. Only several plants in Ukraine demonstrate such level of technology and use the equipping of such level. 
+
+%div#production_list
+  - (1..6).to_a.each do |n|
+    = image_tag "frankivska_#{I18n.locale}/foto-production-#{n}.png"
+
+%p 
+  %i The whole process of creating alcohol drinks on the plant is automated.  
+  Equipment is of rustproof steal, productions are world leader of equipping for food industry are from France, Italy, the USA. 
+  For creating vodka Liqueur-Vodka Distiller uses spirits of the best quality of the best producers of Ukraine.
+
+%p 
+  In June 2008 there was provided refrigerator equipment on the plant, that foresees compliance of optimal temperature
+  on all the stages of technologic process that provides the improving of organoleptic and physicochemical scores of production. 
+  One more important stage is the purifying through setting “Silver Filtration” after which into the purifying vodka we add ingredients 
+  that turn it into classical or special vodka.
+%p
+  %strong For creating the ingredients we use just natural raw. 
+  There are no any chemical stuffs – emphasize the specialists of the plant. 
+  All the raw that comes to the production is – sugar, honey, glucose, fruit lemon, cumin, paprika, 
+  branches and leaves of blackberry and cherry, plum, viburnum, rowan juices and others – certified and meets the demands of the quality and protection. 
+  We make aroma spirits (for special vodka) and infusion (for balsam) of plant components. 
+  Before the filling the production passes the last micro filtration and polishing. 
+  %strong The important stage of the protection is triple laser marking on the cap and bottle.
+%p 
+  Laboratory control helps to get the production of a good quality – from the checking the input materials to the ready made production.
+  The laboratory of the enterprise is equipped by modern laboratory equipment that gives opportunity during the whole production cycle 
+  to provide the quality and protection of the whole production. 
+%h4 This all in complex proves the high level of organization of governing the production and quality of the production.
+    
+
+%div.clear
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#productions_ext_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');
+

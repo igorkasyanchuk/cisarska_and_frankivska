@@ -1,0 +1,28 @@
+- title "Контактна інформація"
+
+%h1 Контактна інформація
+
+#contact_block
+  %p
+    = image_tag 'map.png', :style => 'display: block'
+  %h3.text_center.black_text
+    Україна,76006, м. Івано-Франківськ, вул. Промислова, 29
+  %h3.text_center.black_text
+    тел./факс +38 (0342) 712-742
+  %h3.text_center.black_text
+    e-mail: 
+    = mail_to 'lgz@stk.if.ua'
+    
+  %div.left_align
+    %h3 Відділ продажу:
+    %h3.black_text (0342) 712-745
+  %div.right_align
+    %h3.text_right Відділ маркетингу:
+    %h3.black_text.text_right (0342) 712-185
+  %div.clear
+  
+%div.spacer
+
+- content_for :on_ready do
+  jQuery('#contact_link').addClass('selected_menu');
+  jQuery('ul#contacts_nav').css('display', 'block');    

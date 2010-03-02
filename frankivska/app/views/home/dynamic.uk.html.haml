@@ -1,0 +1,48 @@
+- title "Динаміка розвитку"
+
+%h1 Динаміка розвитку
+
+%div{:style => 'float: left;'}
+  %ul.certificates_list
+    %li= (link_to (image_tag "frankivska_#{I18n.locale}/certificate_3.png"), "/images/frankivska_#{I18n.locale}/certifikate-big-3.png", :class => 'colorbox')
+    %li= (link_to (image_tag "frankivska_#{I18n.locale}/certificate_4.png"), "/images/frankivska_#{I18n.locale}/certifikate-big-4.png", :class => 'colorbox')
+
+%p
+  %strong За три роки своєї роботи завод суттєво збільшив об’єми продаж, в результаті чого зросли і об’єми виробництва. 
+
+%p
+  %i
+    %strong Для порівняння:  
+%p
+  за січень-жовтень 2008 року об'єм виробництва становив 562,7 тис. дал., а за 10 місяців 2009 року – 1068,4 тис. дал., 
+  а це 89 % приросту обсягів виробництва. 
+
+%div.spacer
+
+%div.clear
+
+%div{:style => 'float: left;'}
+  %ul.certificates_list
+    %li= (link_to (image_tag "frankivska_#{I18n.locale}/certificate_5.png"), "/images/frankivska_#{I18n.locale}/certifikate-big-5.png", :class => 'colorbox')
+
+%p
+  Про динамічний розвиток свідчить і те, що зайнявши міцні позиції на 
+  західноукраїнському ринку з 2009 року підприємство почало виходити на національний рівень, а також реалізовувати експортний 
+  потенціал завоюванням ринків Вірменії та Росії. 
+
+%p
+  З наступного року завод продовжуватиме нарощувати потужності за рахунок розширення 
+  асортименту та виходу на ринок Європи.
+
+%p
+  %i
+    %strong 
+      На підприємстві діє сертифікована в міжнародній системі DQS
+      інтегрована система управління якості та безпечності харчових продуктів на відповідність вимогам ISO 9001-2009 та 22000:2005.
+  
+%div.spacer
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#dynamic_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');
