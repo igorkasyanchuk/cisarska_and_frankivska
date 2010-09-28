@@ -1,0 +1,8 @@
+- title 'Video'
+
+= render :partial => '/shared/video'
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#videos_ext_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');

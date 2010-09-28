@@ -6,6 +6,8 @@
       %li= link_to I18n.t('dynamic_link'), dynamic_path, :id => 'dynamic_link'
       %li= link_to I18n.t('awards_link'), awards_path, :id => 'awards_link'
       %li= link_to I18n.t('productions_ext_link'), productions_ext_path, :id => 'productions_ext_link'
+      - if I18n.locale.to_s =~ /en|de/
+        %li= link_to 'Video', videos_path, :id => 'videos_ext_link'
   %li
     = link_to I18n.t('products_link'), products_path, :id => 'products_link'
     %ul#linia_nav.inside_nav

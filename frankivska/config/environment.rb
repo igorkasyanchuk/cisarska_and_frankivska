@@ -22,7 +22,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "ttilley-aasm", :lib => 'aasm', :source => 'http://gems.github.com' 
-  config.gem "inherited_resources", :source => 'http://gemcutter.org' 
+  #config.gem "inherited_resources", :source => 'http://gemcutter.org' 
   config.gem "formtastic"
   config.gem "compass", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "compass-960-plugin", :lib => "ninesixty", :source => "http://gemcutter.org"
@@ -30,8 +30,8 @@ Rails::Initializer.run do |config|
   config.gem "i18n", :source => 'http://gemcutter.org'
   config.gem "romanvbabenko-ukrainian", :lib => "ukrainian", :source => "http://gems.github.com", :version => ">= 0.2.1"   
   config.gem 'smurf', :source => 'http://gemcutter.org' 
-  #config.gem "front-compiler", :source => "http://gemcutter.org"
-
+  #config.gem "front-compiler", :source => "http://gemcutter.org" 
+  
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
   # config.plugins = [ :exception_notification, :ssl_requirement, :all ]

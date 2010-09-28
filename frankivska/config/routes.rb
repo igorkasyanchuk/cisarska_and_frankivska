@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.i_am_not_18_years_old '/i_am_not_18_years_old', :controller => 'home', :action => 'i_am_not_18_years_old'  
   map.company '/company', :controller => 'home', :action => 'company'  
   map.products '/products', :controller => 'home', :action => 'products'  
+  map.videos '/videos', :controller => 'home', :action => 'videos'
   map.quality '/quality', :controller => 'home', :action => 'quality'  
   map.contact '/contact', :controller => 'home', :action => 'contact'  
   map.contact_details '/contact_details', :controller => 'home', :action => 'contact_details'

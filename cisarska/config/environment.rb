@@ -22,7 +22,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "ttilley-aasm", :lib => 'aasm', :source => 'http://gems.github.com' 
-  config.gem "inherited_resources", :source => 'http://gemcutter.org' 
+  #config.gem "inherited_resources", :source => 'http://gemcutter.org' 
   config.gem "formtastic"
   config.gem "compass", :lib => "compass", :source => "http://gemcutter.org"
   config.gem "compass-960-plugin", :lib => "ninesixty", :source => "http://gemcutter.org"
