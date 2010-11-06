@@ -16,6 +16,9 @@
       %li= link_to I18n.t('balzam'), '/balzam', :id => 'balzam_link'
   %li
     = link_to I18n.t('quality_link'), quality_path, :id => 'quality_link'
+    - if I18n.locale.to_s == 'uk'
+      %ul#quality_nav.inside_nav
+        %li= link_to 'Натуральність продукції', naturality_path, :id => 'naturality_link'    
   %li
     = link_to I18n.t('contact_link'), contact_details_path, :id => 'contact_link'
     %ul#contacts_nav.inside_nav
