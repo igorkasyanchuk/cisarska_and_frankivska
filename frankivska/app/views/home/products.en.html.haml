@@ -4,7 +4,7 @@
 %p
   %div.vodka_list
     - ['luksova', 'oruginalna', 'sriblasta', 'lagidna', 'gostunna', 'z_pertcem'].each do |v|
-      = (link_to (image_tag "general/small/#{v}.png"), :controller => 'home', :action => v )
+      = (link_to (image_tag "general_en/small/#{v}.png"), :controller => 'home', :action => v )
 
 - content_for :on_ready do
   jQuery('#products_link').addClass('selected_menu');
