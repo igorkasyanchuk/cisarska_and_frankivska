@@ -1,0 +1,25 @@
+- title "FRANKOFF"
+
+%h1 FRANKOFF
+
+%table
+  %tr
+    %td{:width => '20%'}
+      = (link_to (image_tag '/images/frankivska/frankoffsilver.png'), frankoffsilver_path)
+    %td{:width => '20%'}
+      = (link_to (image_tag '/images/frankivska/frankoffgold.png'), frankoffgold_path)
+    %td
+      = image_tag '/images/frankivska/slide0060_image243.png'
+      %br
+      %br
+      %strong{:style => 'font-size: 11px; text-align: center;'} 
+      - if I18n.locale.to_s =~ /uk|ru/
+        Використовуючи багаторічний досвід та технології ми створили абсолютно нову горілку з новим FRANKOFF. 
+      - else
+        Using out long-term experience and novel technologies we created absolutely new vodka with a new name FRANKOFF.
+      
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#frankoff_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');

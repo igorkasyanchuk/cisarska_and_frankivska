@@ -18,7 +18,13 @@ ActionController::Routing::Routes.draw do |map|
   map.productions_ext '/productions_ext', :controller => 'home', :action => 'productions_ext'  
   map.dynamic '/dynamic', :controller => 'home', :action => 'dynamic'  
   map.history '/history', :controller => 'home', :action => 'history'  
-  map.awards '/awards', :controller => 'home', :action => 'awards'  
+  map.awards '/awards', :controller => 'home', :action => 'awards'
+  
+  map.frankoff '/frankoff', :controller => 'home', :action => 'frankoff'
+  map.legend '/legend', :controller => 'home', :action => 'legend'
+  map.frankoffsilver '/frankoffsilver', :controller => 'home', :action => 'frankoffsilver'
+  map.frankoffgold '/frankoffgold', :controller => 'home', :action => 'frankoffgold'
+  
   map.simple_captcha '/simple_captcha/:action', :controller => 'simple_captcha'
   map.connect "sitemap.xml", :controller => "sitemap", :action => "sitemap", :format => 'xml'
   map.connect ':controller/:action/:id'

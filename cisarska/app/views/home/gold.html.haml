@@ -1,0 +1,46 @@
+%div.line_top_for_bottle
+
+%div{:class => 'vodka_page_block', :style => 'width: 300px;'}
+  - if I18n.locale.to_s =~ /uk|ru/
+    - title "ЦІСАРСЬКА ЗОЛОТА"
+    %h1.black_text.vodka_name ЦІСАРСЬКА ЗОЛОТА
+    %div.description 
+      %p
+        нова горілка преміум-класу, що поєднала в собі бездоганну якість та цілющі властивості.
+        %br
+        %br
+        Відбірний зерновий спирт «Люкс» та найчистіші натуральні компоненти надають її смаку свіжості та легкості.
+        %br
+        %br
+        Створена на основі радіоли рожевої, більш відомої в народі як «Золотий корінь», горілка «Цісарська Золота» володіє тонізуючими властивостями.
+        %br
+        %br
+        Багатогранний смак, тонкий аромат та вишукана напівкришталева пляшка стане приємним подарунком для тих, хто знає ціну якості.
+    %div.micnist Міцність: 40%;
+    %div.mistkist Місткість: 0,75л.
+  - else
+    - title "TSISARSKA GOLD"
+    %h1.black_text.vodka_name TSISARSKA GOLD
+    %div.description 
+      %p
+        new vodka of premium class that combined pure quality and beneficial properties.
+        %br
+        %br
+        Selected wheat alcohol “de Luxe” and virgin natural components give its taste freshness and lightness.
+        %br
+        %br
+        Created on the basis of Rhodіola rosea, more famous as “Gold root”, vodka “Tsisarska Gold” possesses the tonic properties. 
+        %br
+        %br
+        Multifaceted taste, delicate aroma and fine half-crystal bottle will become a pleasant gift for everybody who knows the value of quality. 
+    %div.micnist Strength: 40%;
+    %div.mistkist Holding Capacity: 0,75l.
+
+= image_tag 'cisarska_gold.png', :style => 'float: right; width: 375px; height: 500px'
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#gold_productions_link').css('color', '#FEFCCB').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');    

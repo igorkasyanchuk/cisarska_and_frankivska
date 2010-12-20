@@ -1,0 +1,31 @@
+= image_tag '/images/frankivska/big/Legenda.png', :style => 'float: left; height: 470px;'
+%div{:class => 'vodka_page_block', :style => 'width: 260px;'}
+  - if I18n.locale.to_s =~ /uk|ru/
+    - title "Франківська Легенда"
+    %h1.black_text.vodka_name Франківська Легенда
+    %div.description Карпати… Загадкова гірська країна з кришталево-прозорими ріками, неповторними рівнинами та квітучою природою. Країна, де легенди передаються зі споконвіків… 
+    %div.description
+      Авторська розробка фахівців компанії. Франківська Легенда створена на основі відбірного спирту класу «Люкс» та чистої 
+      джерельної води. Ароматний спирт червоної рути, Карпатської квітки що давно стала символом нашого краю, надає цій горілці неперевершеного смаку та ледь відчутного приємного аромату. 
+    %div.description 
+      Пом’якшена натуральним медом Франківська Легенда подарує незабутню палітру смаку.
+    %div.micnist Міцність: 40%;
+    %div.mistkist Місткість: 0,75л.
+  - else
+    - title "Frankivsk Legend"
+    %h1.black_text.vodka_name Frankivsk Legend
+    %div.description Carpathians… Mysterious mountain country with crystal transparent rivers, unique valleys and blossoming nature. Country where legends are passed on since the beginning of time…
+    %div.description
+      Authoring of the specialists of the company. Frankivsk Legend is created on the basis of selected alcohol “de Luxe” and pure spring water. Alcohol redolent with red rue, 
+      the Carpathian flower that long time ago became a symbol of our land, gives this vodka unbeaten taste and barely sensed pleasant aroma.
+    %div.description 
+      Mitigated with natural honey, “Frankivsk Legend” will present the unforgettable palette of taste.
+    %div.micnist Strength: 40%;
+    %div.mistkist Holding Capacity: 0,75l.
+    
+.clear
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#legend_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');

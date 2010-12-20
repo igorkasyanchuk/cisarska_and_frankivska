@@ -19,6 +19,9 @@ ActionController::Routing::Routes.draw do |map|
   map.dynamic '/dynamic', :controller => 'home', :action => 'dynamic'  
   map.history '/history', :controller => 'home', :action => 'history'  
   map.awards '/awards', :controller => 'home', :action => 'awards'
+  
+  map.gold '/gold', :controller => 'home', :action => 'gold'
+  
   map.balzam '/balzam', :controller => 'home', :action => 'balzam'
   map.simple_captcha '/simple_captcha/:action', :controller => 'simple_captcha'
   map.connect "sitemap.xml", :controller => "sitemap", :action => "sitemap", :format => 'xml'

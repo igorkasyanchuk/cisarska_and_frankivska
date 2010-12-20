@@ -1,0 +1,33 @@
+- title "FRANKOFF Gold"
+
+= image_tag '/images/frankivska/big/frankoffgold.png', :style => 'float: left; height: 470px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block', :style => 'width: 210px;'}
+  = image_tag '/images/frankivska/big/slide0060_image243.png'
+  - if I18n.locale.to_s =~ /uk|ru/
+    %div.description{:style => 'padding-bottom: 0'}
+      Використовуючи багаторічний досвід та технології ми створили абсолютно нову горілку з новим FRANKOFF. 
+    %h1.black_text.vodka_name Frankoff Gold
+    %div.description це вишукане поєднання смаку та стилю.
+    %div.description 
+      Приємний ледь відчутний аромат троянди та женьшеню відчутно пом’якшує горілку,  надає їй благородного смаку та дарує незабутні враження.
+    %div.description 
+      %strong FRANKOFF GOLD
+      == - смак, що запам’ятається надовго.
+    %div.micnist Міцність: 40%;
+    %div.mistkist Місткість: 0,75л.
+  - else
+    %div.description{:style => 'padding-bottom: 0'}
+      Using out long-term experience and novel technologies we created absolutely new vodka with a new name FRANKOFF.
+    %h1.black_text.vodka_name Frankoff Gold
+    %div.description “FRANKOFF GOLD” is subtle combination of taste and style.
+    %div.description 
+      Pleasant and barely sensed aromas of rose and ginseng significantly soften vodka, gives noble taste to it and bestows unforgettable impression.
+    %div.description
+      “FRANKOFF GOLD” – taste  that will stay for a long time. 
+    %div.micnist Strength: 40%;
+    %div.mistkist Holding Capacity: 0,75l.
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#frankoff_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');

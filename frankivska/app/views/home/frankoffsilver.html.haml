@@ -1,0 +1,29 @@
+- title "FRANKOFF Silver"
+
+= image_tag '/images/frankivska/big/frankoffsilver.png', :style => 'float: left; height: 450px;padding-bottom: 50px'
+%div{:class => 'vodka_page_block', :style => 'width: 230px;'}
+  = image_tag '/images/frankivska/big/slide0060_image243.png'
+  - if I18n.locale.to_s =~ /uk|ru/
+    %div.description{:style => 'padding-bottom: 0'}
+      Використовуючи багаторічний досвід та технології ми створили абсолютно нову горілку з новим FRANKOFF. 
+    %h1.black_text.vodka_name Frankoff Silver
+    %div.description нова елітна горілка з бездоганним свіжим смаком та ледь відчутними нотами м’яти та лимону.
+    %div.description 
+      Приготовлена за класичною рецептурою виключно на натуральних інгредієнтах та відбірному спирті «Люкс» 
+      горілка <b>FRANKOFF SILVER</b> створена для тих, хто вміє цінувати справжню якість.
+    %div.micnist Міцність: 40%;
+    %div.mistkist Місткість: 0,75л.
+  - else
+    %div.description{:style => 'padding-bottom: 0'}
+      Using out long-term experience and novel technologies we created absolutely new vodka with a new name FRANKOFF.
+    %h1.black_text.vodka_name Frankoff Silver
+    %div.description is new elite vodka with pure fresh taste and bare sensation of mint and lemon.
+    %div.description 
+      Prepared according to the classic formula using exclusively natural ingredients and selected alcohol “de Luxe”, vodka “FRANKOFF SILVER” is created for those who appreciate the real quality.
+    %div.micnist Strength: 40%;
+    %div.mistkist Holding Capacity: 0,75l.
+
+- content_for :on_ready do
+  jQuery('#products_link').addClass('selected_menu');
+  jQuery('#frankoff_productions_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#linia_nav').css('display', 'block');

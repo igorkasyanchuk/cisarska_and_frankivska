@@ -11,7 +11,9 @@
   %li
     = link_to I18n.t('products_link'), products_path, :id => 'products_link'
     %ul#linia_nav.inside_nav
-      %li= link_to I18n.t('linia_productions'), products_path, :id => 'linia_productions_link'
+      %li= link_to I18n.t('linia_productions_new'), products_path, :id => 'linia_productions_link'
+      %li= link_to I18n.t('frankoff'), frankoff_path, :id => 'frankoff_productions_link'
+      %li= link_to I18n.t('legend'), legend_path, :id => 'legend_productions_link'
       %li= link_to I18n.t('cisarska'), 'http://cisarska.com.ua/', :id => 'cisarska_link'
       %li= link_to I18n.t('balzam'), "http://cisarska.com.ua/#{I18n.locale.to_s}/balzam", :id => 'balzam_link'
   %li
