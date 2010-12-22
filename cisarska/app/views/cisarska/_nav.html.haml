@@ -14,6 +14,7 @@
       %li= link_to I18n.t('linia_productions'), products_path, :id => 'linia_productions_link'
       %li= link_to I18n.t('cisarska_gold'), gold_path, :id => 'gold_productions_link'
       %li= link_to I18n.t('frankivska'), 'http://frankivska.com.ua/', :id => 'cisarska_link'
+      %li= link_to 'FRANKOFF', "http://frankivska.com.ua/#{I18n.locale.to_s}/frankoff", :id => 'frankoff_link'
       %li= link_to I18n.t('balzam'), '/balzam', :id => 'balzam_link'
   %li
     = link_to I18n.t('quality_link'), quality_path, :id => 'quality_link'
