@@ -1,28 +1,18 @@
-%h1 Натуральність продукції
+- title "NATURALNESS OF PRODUCT"
 
-%table
-  %tr
-    %td{:style => 'padding-right: 4px'}
-      %p Завдяки ексклюзивним рецептурам і використанню винятково натуральної природної сировини продукція лікеро-горілчаного заводу ТзОВ «Станіславська Торгова Компанія» отримала визнання на вітчизняному ринку та за кордоном.
-      %p Усі напої — горілки, горілки особливі та бальзам — виготовляються із додаванням компонентів власного приготування. Поєднання старовинних традицій із новітніми технологіями дозволяє створювати продукцію відмінної якості із оригінальним неперевершеним смаком. 
-      %p Основою для приготування горілок є суміш високоякісного спирту й води. Зерновий спирт класу «Люкс» поєднується із найчистішою водою з карпатських рік, яка додатково підготовлюється з певними ступенями очистки на установці провідного виробника обладнання ‘’Guligan’’, виробництва США. Спирти найвищого ґатунку постачають виробники, відзначені експертною дегустаційною комісією концерну «Укрспирт».
-      %p Суміш спирту й води проходить фільтрацію за класичною технологією на вугільно-пісочній батареї, а також для покращення органолептичних властивостей горілку додатково обробляють за технологією «срібна фільтрація». Для приготування горілок особливих та лікеро-горілчаних напоїв використовуються ароматні спирти, настої, морси і спиртовані соки, що виготовляються на виробництві з натуральної сировини. Ароматні спирти для виробництва горілок особливих отримують дистиляцією (перегонкою) натуральної сушеної рослинної, плодоягідної сировини та прянощів.
-      %p Для лікеро-горілчаних напоїв, а саме настоянок та бальзамів готують настої та морси. Їх отримують екстрагуванням сушеної рослинної, плодово-ягідної сировини й прянощів водно-спиртовою рідиною, використовуючи трави звіробою, буркуну, материнки, листя чорної смородини та вишні, цвіт липи, корінь ехінацеї, пелюстки троянди, плоди глоду, шипшини, смородини та горобини, корицю, паприку і червоний стручковий перець.
-      %p У бальзамах використовують спиртовані соки чорноплідної горобини, калини та вишні. Виробництво отримує натуральний свіжовідтиснений сік і відразу проводить його спиртування. Це дозволяє максимально зберегти і передати напоям смак та аромат.
-      %p Поєднуючи особливі рецептури з натуральними інгредієнтами ми створюємо неймовірну палітру різноманітних смаків та пропонуємо споживачам відчути бездоганну якість нашої продукції.
-    %td{:style => 'vertical-align: top'}
-      = (link_to (image_tag "frankivska/nat/IMG_2888_small.jpg"), "/images/frankivska/nat/IMG_2888.jpg", :class => 'colorbox')
-      %br
-      %br
-      = (link_to (image_tag "frankivska/nat/IMG_2891_small.jpg"), "/images/frankivska/nat/IMG_2891.jpg", :class => 'colorbox')
-      %br
-      %br
-      = (link_to (image_tag "frankivska/nat/IMG_2892_small.jpg"), "/images/frankivska/nat/IMG_2892.jpg", :class => 'colorbox')
-      %br
-      %br
-      = (link_to (image_tag "frankivska/nat/IMG_2896_small.jpg"), "/images/frankivska/nat/IMG_2896.jpg", :class => 'colorbox')
-  
-.clear{:style => 'clear: both'}
+%h1 NATURALNESS OF PRODUCT
+
+= image_tag "frankivska/naturalnist_produktcii.jpg", :style => 'float: left; padding-right: 15px; padding-top: 15px;'
+
+%p By virtue of exclusive formulas and use of exceptionally natural raw material, the product of liquor-vodka manufacturer LLC “Stanislavska Trading Company” has got recognition on national and international markets. 
+%p All beverages – vodkas, special vodkas and balms – are manufactured adding the components of proper preparation. The combination of old traditions with novel technologies allows creation of the product of excellent quality and original pure taste. 
+%p The base for the preparation of vodkas is a blend of high quality alcohol with water. Wheat alcohol of “de Luxe” class is mixed with the purest water of the Carpathian rivers and complementary purified using the technology of the lead manufacturer of “Guligan” equipment, USA. Alcohol of the highest quality is supplied by the producers certified by the Expert Tasting Committee of the concern “Ukralcohol”.
+%p The blend of alcohol and water undergoes filtering according to the classic technology using carbon-sand battery; also, vodka additionally goes through the so called “silver filtration” for improvement of its organoleptic properties. We use aroma alcohol, liquor, fruit drinks and alcoholized juice manufactured from the natural raw material for reparation of special vodkas and liquor-vodka drinks. Aroma alcohol for the production of special vodkas is received after its distillation through natural dry material of plants, berries and spices. 
+%p For liquor-vodka beverages, namely liquors and balms, we prepare tinctures and fruit drinks. Water-alcohol liquid is passing through dry plants, berries and spices, namely tutsan, sweet clover, marjoram, leaves of black currants and cherry, linden blossom, echinacea root, rose petals, haws, hips, currants and ashberries, cinnamon, sweet pepper, chilly pepper. 
+%p For balms we use the alcoholized juice from ashberries, guelder rose and cherries. The production line receives the freshly impressed juice and immediately adds alcohol to it. It allows maximally keeping natural taste and aroma and transferring them to the drinks. 
+%p By combining the special formulas with natural ingredients we create an unbelievable palette of different tastes and offer the feeling of pure quality of our products for our consumers.  
+
+.clear{:style => 'clear: both; padding-bottom: 50px'}
 
 - content_for :on_ready do
   jQuery('#quality_link').addClass('selected_menu');
