@@ -1,0 +1,20 @@
+source 'http://rubygems.org'
+
+gem 'unicorn', '~> 3.3.1'
+gem "rails", "~> 2.3.5"
+gem 'sqlite3-ruby'
+
+gem 'mysql'
+gem "inherited_resources", '1.0.2'
+gem "has_scope", '0.4'
+gem "responders", '0.4.2'
+gem 'haml', '2.2.23'
+gem "rmagick", '2.12.2'
+gem "pacecar"
+gem 'unicode'
+gem "i18n"
+gem "ukrainian"
+gem "formtastic"
+gem 'ttilley-aasm'
+gem 'compass', '0.8.17'
+gem 'compass-960-plugin', '0.9.11'
