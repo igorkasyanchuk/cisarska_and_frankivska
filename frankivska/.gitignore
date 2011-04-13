@@ -45,3 +45,4 @@ public/javascripts/public_bundle.js
 public/stylesheets/public_bundle.css
 public/stylesheets/compiled
 public/stylesheets/compiled/*
+config/deploy.rb
