@@ -19,6 +19,7 @@ ActionController::Routing::Routes.draw do |map|
   map.dynamic '/dynamic', :controller => 'home', :action => 'dynamic'  
   map.history '/history', :controller => 'home', :action => 'history'  
   map.awards '/awards', :controller => 'home', :action => 'awards'
+  map.export '/export', :controller => 'home', :action => 'export'
   
   map.gold '/gold', :controller => 'home', :action => 'gold'
   

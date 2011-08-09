@@ -1,0 +1,40 @@
+- title 'Export'
+
+%h1 Export
+
+%p Limited Liability Company “Stanislavska Trading Company” started the realization of its export potential since 2009.  One of its strategic partners at present moment is «Terra Plus» company, which represents its interests in South African Republic and will further act as its exclusive world distributor. 
+
+%p The exclusive importer is “Honey Coastline Investments” company. 
+
+%p Company’s portfolio includes the following brands: TM “Tsisartska”, TM “Frankivska”, TM “Frankoff” and TM “Prykarpathian Balsam”, each of them presented by volume containers of different capacity. 
+
+%p= link_to 'View Our Presentation &rarr;', '/presentation.ppsx', :target => '_blank'
+
+%p{:style => 'text-indent: 0'}
+  Exclusive world Distributor
+  %br
+  = link_to 'www.terraplus-world.com', 'http://www.terraplus-world.com'
+
+%p{:style => 'text-indent: 0'}
+  Importer 
+  %br
+  Honey Coastline Investment
+  %br
+  Cape Town
+  %br
+  Killarney Gardens
+  %br
+  Daytona 5
+  %br
+  South Africa
+
+%div.vodka_list
+  - ['Frankivska Pepper - 750 ml 001', 'Tsisarska Red Pepper - 750 ml 001', 'Frankoff Gold - 750 ml 001', 'Balsam - 750 ml 001', 'Frankoff Silver - 750 ml 001', 'Frankivska Cinnamon De Luxe', 'Frankivska Coffee', 'Frankivska Peppermint silver', 'Cisarska Hungarian Peppper', 'Cisarska Czech Plum', 'Frankivska Pepper', 'Cisarska Serbian'].each do |v|
+    = (link_to (image_tag "en/#{v}_small.jpg"), "/images/en/#{v}.jpg", :class => 'colorbox')
+
+.clear
+
+- content_for :on_ready do
+  jQuery('#company_link').addClass('selected_menu');
+  jQuery('#export_link').css('color', 'black').css('font-weight', 'bold');
+  jQuery('ul#products_nav').css('display', 'block');

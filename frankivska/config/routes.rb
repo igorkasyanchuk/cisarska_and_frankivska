@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.company '/company', :controller => 'home', :action => 'company'  
   map.products '/products', :controller => 'home', :action => 'products'  
   map.videos '/videos', :controller => 'home', :action => 'videos'
+  map.export '/export', :controller => 'home', :action => 'export'
   map.quality '/quality', :controller => 'home', :action => 'quality'  
   map.naturality '/naturality', :controller => 'home', :action => 'naturality'
   map.contact '/contact', :controller => 'home', :action => 'contact'  
