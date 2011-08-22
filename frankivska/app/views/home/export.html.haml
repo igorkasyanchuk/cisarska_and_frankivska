@@ -28,6 +28,12 @@
   %br
   South Africa
 
+%h2 Products
+%div.vodka_list
+  - ['франковская кофе', 'франковская люкс', 'франковская перцовая', 'франковская сильвер', 'франкофф голд', 'франкофф сильвер', 'цисарска домашняя', 'цисарска смородина', 'цисарска с перцем', 'цисарская слива', 'бальзам'].each do |e|
+    = (link_to image_tag("africa/#{e}.png", :style => 'margin-bottom: 12px; margin-right: 38px'), "/images/africa/big/#{e}.png", :class => 'colorbox')
+
+%h2 Certificats
 %div.vodka_list
   - ['Frankivska Pepper - 750 ml 001', 'Tsisarska Red Pepper - 750 ml 001', 'Frankoff Gold - 750 ml 001', 'Balsam - 750 ml 001', 'Frankoff Silver - 750 ml 001', 'Frankivska Cinnamon De Luxe', 'Frankivska Coffee', 'Frankivska Peppermint silver', 'Cisarska Hungarian Peppper', 'Cisarska Czech Plum', 'Frankivska Pepper', 'Cisarska Serbian'].each do |v|
     = (link_to (image_tag "en/#{v}_small.jpg", :style => 'margin-bottom: 12px; margin-right: 8px'), "/images/en/#{v}.jpg", :class => 'colorbox')
