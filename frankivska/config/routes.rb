@@ -20,6 +20,8 @@ ActionController::Routing::Routes.draw do |map|
   map.dynamic '/dynamic', :controller => 'home', :action => 'dynamic'  
   map.history '/history', :controller => 'home', :action => 'history'  
   map.awards '/awards', :controller => 'home', :action => 'awards'
+
+  map.actions '/actions', :controller => 'home', :action => 'actions'
   
   map.frankoff '/frankoff', :controller => 'home', :action => 'frankoff'
   map.legend '/legend', :controller => 'home', :action => 'legend'

@@ -20,6 +20,8 @@ ActionController::Routing::Routes.draw do |map|
   map.history '/history', :controller => 'home', :action => 'history'  
   map.awards '/awards', :controller => 'home', :action => 'awards'
   map.export '/export', :controller => 'home', :action => 'export'
+
+  map.actions '/actions', :controller => 'home', :action => 'actions'
   
   map.gold '/gold', :controller => 'home', :action => 'gold'
   
